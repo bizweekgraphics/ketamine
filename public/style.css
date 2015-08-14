@@ -1,0 +1,63 @@
+body
+{ 
+    -webkit-font-smoothing: antialiased;
+	transition: -webkit-filter 2s;
+	color: initial;
+	background: url('bg.jpg') left repeat-y, black url('bg.jpg') right repeat-y;
+}
+
+
+#inner, #inner p {
+	background: none;
+	color: #fff;
+}
+
+#header {
+	width: 100%;
+	background: url(header.png) center no-repeat;
+	  -webkit-background-size: 95%;
+	  -moz-background-size: 95%;
+	  -o-background-size: 95%;
+	  background-size: 95%;
+	height:900px;
+	border:0;
+}
+
+h1,h2,h3{margin:0;padding: 0}
+
+h1{
+	font-family:'Druk Bold Web';
+	font-size: 150px;
+text-shadow:
+    3px 3px 0 #000,
+    /* Simulated effect for Firefox and Opera
+       and nice enhancement for WebKit */
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+   -1px  1px 0 #000,
+    1px  1px 0 #000;
+}
+
+body.invert {
+  -webkit-filter: invert(100%);
+}
+
+.title{text-align: center;position: relative;top: 650px}
+
+.center{margin: 0 auto;}
+
+.pullQ {font-size: 70px;line-height:70px;font-family:'Druk Bold Web';text-align: center;margin: 40px -100px}
+
+
+
+#inner {max-width: 700px; font-size: 20px;line-height: 24px}
+
+#inner img{width: 100%}
+
+.intro {font-size: 30px;line-height: 32px;}
+
+@font-face{font-family:'Druk Bold Web';src:url(https://s3.amazonaws.com/bw-fonts/Druk-Bold-Web.eot);src:url(https://s3.amazonaws.com/bw-fonts/Druk-Bold-Web.eot?#iefix) format('embedded-opentype'),url(https://s3.amazonaws.com/bw-fonts/Druk-Bold-Web.woff) format('woff'),url(https://s3.amazonaws.com/bw-fonts/Druk-Bold-Web.ttf) format('truetype'),url('https://s3.amazonaws.com/bw-fonts/Druk-Bold-Web.svg#Druk Web') format('svg');font-weight:500;font-style:normal;font-stretch:normal}
+
+@font-face{font-family:'Druk Web';src:url(https://s3.amazonaws.com/bw-fonts/Druk-Medium-Web.eot);src:url(https://s3.amazonaws.com/bw-fonts/Druk-Medium-Web.eot?#iefix) format('embedded-opentype'),url(https://s3.amazonaws.com/bw-fonts/Druk-Medium-Web.woff) format('woff'),url(https://s3.amazonaws.com/bw-fonts/Druk-Medium-Web.ttf) format('truetype'),url('https://s3.amazonaws.com/bw-fonts/Druk-Medium-Web.svg#Druk Web') format('svg');font-weight:500;font-style:normal;font-stretch:normal}
+
+@font-face{font-family:'Druk Wide Web';src:url(https://s3.amazonaws.com/bw-fonts/DrukWide-Super-Web.eot);src:url(https://s3.amazonaws.com/bw-fonts/DrukWide-Super-Web.eot?#iefix) format('embedded-opentype'),url(https://s3.amazonaws.com/bw-fonts/DrukWide-Super-Web.woff) format('woff'),url(https://s3.amazonaws.com/bw-fonts/DrukWide-Super-Web.ttf) format('truetype'),url('https://s3.amazonaws.com/bw-fonts/DrukWide-Super-Web.svg#Druk Wide Web') format('svg');font-weight:900;font-style:normal;font-stretch:normal}
