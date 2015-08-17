@@ -1,13 +1,39 @@
+/*
 
+     .-.    __
+    |   |  /\ \
+    |   |  \_\/      __        .-.
+    |___|        __ /\ \      /:::\
+    |:::|       / /\\_\/     /::::/
+    |:::|       \/_/        / `-:/
+    ':::'__   _____ _____  /    /
+        / /\ /     |:::::\ \   /
+        \/_/ \     |:::::/  `"`
+           __ `"""""""""`
+          /\ \
+          \_\/
+                                    _________
+                                   {_________}
+                                    )=======(
+    TT                             /         \
+       SD                         | _________ |
+                                  ||         ||
+                                  ||  |_/    ||
+                                  ||  | \    ||
+                            __    ||  |  \   ||
+                       __  (_|)   |'---------'|
+                      (_|)        `-.........-'
+
+
+
+
+*/
 
 @font-face{font-family:'Druk Bold Web';src:url(https://s3.amazonaws.com/bw-fonts/Druk-Bold-Web.eot);src:url(https://s3.amazonaws.com/bw-fonts/Druk-Bold-Web.eot?#iefix) format('embedded-opentype'),url(https://s3.amazonaws.com/bw-fonts/Druk-Bold-Web.woff) format('woff'),url(https://s3.amazonaws.com/bw-fonts/Druk-Bold-Web.ttf) format('truetype'),url('https://s3.amazonaws.com/bw-fonts/Druk-Bold-Web.svg#Druk Web') format('svg');font-weight:500;font-style:normal;font-stretch:normal}
-
 @font-face{font-family:'Druk Web';src:url(https://s3.amazonaws.com/bw-fonts/Druk-Medium-Web.eot);src:url(https://s3.amazonaws.com/bw-fonts/Druk-Medium-Web.eot?#iefix) format('embedded-opentype'),url(https://s3.amazonaws.com/bw-fonts/Druk-Medium-Web.woff) format('woff'),url(https://s3.amazonaws.com/bw-fonts/Druk-Medium-Web.ttf) format('truetype'),url('https://s3.amazonaws.com/bw-fonts/Druk-Medium-Web.svg#Druk Web') format('svg');font-weight:500;font-style:normal;font-stretch:normal}
-
 @font-face{font-family:'Druk Wide Web';src:url(https://s3.amazonaws.com/bw-fonts/DrukWide-Super-Web.eot);src:url(https://s3.amazonaws.com/bw-fonts/DrukWide-Super-Web.eot?#iefix) format('embedded-opentype'),url(https://s3.amazonaws.com/bw-fonts/DrukWide-Super-Web.woff) format('woff'),url(https://s3.amazonaws.com/bw-fonts/DrukWide-Super-Web.ttf) format('truetype'),url('https://s3.amazonaws.com/bw-fonts/DrukWide-Super-Web.svg#Druk Wide Web') format('svg');font-weight:900;font-style:normal;font-stretch:normal}
 
 body {
-  font-family: sans-serif;
   -webkit-font-smoothing: antialiased;
   margin: 0;
   padding: 0;
@@ -34,7 +60,6 @@ header {
 article {
   margin-top: 100%;
   background: white;
-  padding: 2em 10em;
 }
 
 .heddd {
@@ -49,8 +74,53 @@ article {
   line-height: 2.7em;
 }
 
+.fullw {
+  width: 100%;
+  position: relative; left: 0; top: 0;
+}
+.fullw img{max-width: 1400px}
+
+.gif1, .gif2, .gif3, .gif4, .gif5, .gif6, .gif7,.gif8,.gif9,.gif10,.gif11   {position: absolute;}
+
+.gif1{
+  top:-40px;
+  left:-100px;}
+.gif2{
+  top:20px;
+  right:-10px;}
+.gif3{
+  bottom:20px;
+  left:-60px;}
+.gif4{
+  top:800px;
+  right:-40px;}
+.gif5{
+  top:700px;
+  right:120px;}
+.gif6{
+  top:500px;
+  left:10px;}
+.gif7{
+  top:300px;
+  right:-70px;}
+.gif8{
+  top:1000px;
+  left:200px;}
+.gif9{
+  top:900px;
+  left:10px;}
+.gif10{
+  top:30px;
+  left:30px;}
+.gif11{
+  bottom:30px;
+  right:30px;}
+
 .inner {
    max-width: 700px;
+  font-family: 'TiemposTextWeb-Regular';
+  font-size: 19px;
+  line-height: 24px;
 }
 
 .center{
@@ -66,3 +136,31 @@ article {
 }
 
 .inner img {max-width: 100%}
+
+.photo2{
+  float:left;
+  margin-left: -100px;
+  padding: 20px 20px 20px 0;
+  max-width: 350px;
+}
+
+
+
+
+@media (max-width: 300px) {
+}
+
+@media (max-width: 400px) {
+}
+
+@media (max-width: 600px) {
+}
+
+@media (max-width: 800px) {
+}
+
+@media (max-width: 1000px) {
+}
+
+@media (max-width: 1200px) {
+}
