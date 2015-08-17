@@ -1,343 +1,164 @@
+
 <!DOCTYPE html>
-<!--[if lt IE 7]>
-  <html class="no-js lt-ie9 lt-ie8 lt-ie7">
-<![endif]-->
-<!--[if IE 7]>
-  <html class="no-js lt-ie9 lt-ie8">
-<![endif]-->
-<!--[if IE 8]>
-  <html class="no-js lt-ie9">
-<![endif]-->
-<!--[if gt IE 8]><!-->
-  <html class="no-js">
-<!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" href="http://www.bloomberg.com/graphics/assets/img/favicon.png" type="image/x-icon">
+<html lang="en">
+<title>S,M,L,XL - Theater</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="style.css"/>
 
-        <!-- meta tags for this project -->
-        <!-- Enter a title before the dash, probably your headline -->
-        <title>YOUR HEADLINE HERE</title>
+<script src="d3.min.js"></script>
+<script src="underscore-min.js"></script>
 
-        <!-- What flavor of Bloomberg will this graphic be on? -->
-        <meta property="og:site_name" content="Bloomberg.com"/>
-        <!-- What is the main headline? -->
-        <meta property="og:title" content="YOUR HEADLINE HERE">
-        <!-- What is the tweet / share statement? -->
-        <meta property="og:longTitle" content="twitter share language">
-        <!-- What is the share-able image -->
-        <!-- Image aspect ratio: 1.91:1 Image Dimensions: 1200x630px -->
-        <meta property="og:image" content="http://www.bloomberg.com/graphics/YOUR-SLUG-HERE/img/IMAGE-FILE"/>
-        <!-- These two can be the dek text -->
-        <meta property="og:description" content=""/>
-        <meta name="description" content="">
-        <!-- Some keywords if you want -->
-        <meta name="keywords" content="Bloomberg Graphics"/>
-        <!-- The full link to this graphic -->
-        <meta property="og:url" content="http://www.bloomberg.com/graphics/YOUR-SLUG-HERE/"/>
+<body>
 
-        <!-- Parsely tracking -->
-        <meta name="parsely-type" content="post" data-ephemeral="true">
-        <meta name="parsely-section" content="graphics" data-ephemeral="true">
+<header>
 
-        <meta property="og:type" content="article"/>
-        <meta name="twitter:card" content="summary"/>
-        <!-- @bbgvisualdata is Bloomberg Graphics -->
-        <meta name="twitter:site" content="@bbgvisualdata"/>
+<h1>The Optimistic Thought Experiment</h1>
+<h3>Peter Thiel</h3>
 
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <link rel="stylesheet" type="text/css" href="http://www.bloomberg.com/graphics/assets/css/fonts.css"/>
-        <link rel="stylesheet" type="text/css" href="http://www.bloomberg.com/graphics/assets/css/business.css?"/>
-        <link rel="stylesheet" type="text/css" href="style.css"/>
+</header>
 
-        <script src='http://www.bloomberg.com/graphics/assets/js/lib/head.js?'></script>
-
-        <style type="text/css">
-        /*
-        styles for this project
-        */
-        </style>
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
-        <div class="top-banner">
-          <div class="center">
-              <ul>
-                  <li>
-                      <a target="_blank" href="http://www.bloomberg.com/company/?tophat=open">Bloomberg the Company
-
-                      <span class="banner-icon external-link">
-                          <svg id="Layer_1" x="0px" y="0px" width="13px" height="12px">
-                          <g>
-                              <path fill="#FFFFFF" d="M9.929,7.071v2.144c0,0.531-0.189,0.985-0.566,1.362C8.985,10.954,8.531,11.143,8,11.143H2.429                                         c-0.531,0-0.986-0.189-1.363-0.566C0.688,10.2,0.5,9.746,0.5,9.214V3.643c0-0.531,0.188-0.985,0.566-1.363                                         c0.377-0.377,0.832-0.565,1.363-0.565h4.714c0.062,0,0.114,0.02,0.154,0.06c0.04,0.041,0.061,0.092,0.061,0.154v0.429                                         c0,0.062-0.021,0.114-0.061,0.154c-0.04,0.04-0.092,0.06-0.154,0.06H2.429c-0.295,0-0.547,0.105-0.757,0.315                                         c-0.21,0.209-0.314,0.462-0.314,0.756v5.572c0,0.294,0.104,0.547,0.314,0.757c0.21,0.209,0.462,0.314,0.757,0.314H8                                         c0.295,0,0.547-0.105,0.757-0.314c0.209-0.21,0.314-0.463,0.314-0.757V7.071c0-0.062,0.021-0.113,0.061-0.153                                         c0.04-0.041,0.091-0.061,0.154-0.061h0.429c0.062,0,0.114,0.02,0.154,0.061C9.908,6.958,9.929,7.009,9.929,7.071z M12.5,1.286                                         v3.429c0,0.116-0.042,0.216-0.127,0.301c-0.085,0.085-0.186,0.127-0.302,0.127S11.854,5.1,11.771,5.015l-1.179-1.179L6.226,8.203                                         C6.181,8.248,6.129,8.27,6.071,8.27S5.962,8.248,5.917,8.203L5.154,7.439C5.109,7.395,5.087,7.343,5.087,7.286                                         c0-0.058,0.022-0.109,0.067-0.154L9.52,2.765L8.342,1.586C8.257,1.502,8.214,1.402,8.214,1.286s0.042-0.217,0.127-0.302                                         c0.084-0.084,0.185-0.127,0.301-0.127h3.429c0.116,0,0.217,0.042,0.302,0.127C12.458,1.069,12.5,1.169,12.5,1.286z"></path>
-                          </g>
-                          </svg>
-                      </span>
-
-                      </a>
-                  </li>
-                  <li>
-                      <a target="_blank" href="https://bba.bloomberg.net/">Bloomberg Anywhere Login
-                          <span class="banner-icon terminal">
-                              <svg id="Layer_2" x="0px" y="0px" width="23px" height="13px" viewBox="0 0 22.708 14.833" enable-background="new 0 0 22.708 14.833">
-                              <g>
-                                  <path fill="none" stroke="#FFFFFF" stroke-width="0.75" stroke-miterlimit="10" d="M10.94,8.877c0,0.226-0.183,0.408-0.408,0.408                                             H1.126c-0.226,0-0.408-0.183-0.408-0.408V1.175c0-0.226,0.183-0.408,0.408-0.408h9.405c0.226,0,0.408,0.183,0.408,0.408V8.877z"></path>
-                                  <path fill="none" stroke="#FFFFFF" stroke-width="0.75" stroke-miterlimit="10" d="M22.014,8.877c0,0.226-0.183,0.408-0.408,0.408                                             H12.2c-0.226,0-0.408-0.183-0.408-0.408V1.175c0-0.226,0.183-0.408,0.408-0.408h9.405c0.226,0,0.408,0.183,0.408,0.408V8.877z"></path>
-                                  <path fill="none" stroke="#FFFFFF" stroke-width="0.75" stroke-miterlimit="10" d="M10.088,11.08v0.689                                             c0,0.256,0.287,0.464,0.852,0.464c0.565,0,0.852-0.208,0.852-0.464V11.08l0.22,0.004c1.593,0.177,2.79,0.754,2.79,1.46                                             c0,0.845-1.636,1.529-3.708,1.529s-3.729-0.685-3.729-1.529c0-0.693,1.14-1.279,2.691-1.466L10.088,11.08z"></path>
-                              </g>
-                              </svg>
-                          </span>
-                      </a>
-                  </li>
-              </ul>
-              <div class="clear"></div>
-          </div>
-        </div>
-
-        <div id='full-header-space'></div>
-
-        <div id="full-header" class='sticky-header'>
-          <a href="http://bloomberg.com/"><img id="header-logo" class='white' src="http://www.bloomberg.com/graphics/assets/img/BB-Logo-2line-wb.svg"></a>
-          <a href="http://bloomberg.com/"><img id="header-logo" class='blue'  src="http://www.bloomberg.com/graphics/assets/img/BB-Logo-2line.svg"></a>
-
-          <div class="container bannerad"></div>
-          <div id="hidden-banner-ad"></div>
-
-          <div id="header-sharing">
-          <div class="header-icon" id="header-icon-twitter"><img class="blue" src="http://www.bloomberg.com/graphics/assets/img/twitter.png"><img class="white" src="http://www.bloomberg.com/graphics/assets/img/twitter_w.png"></div>
-          <div class="header-icon" id="header-icon-fb"><img class="blue" src="http://www.bloomberg.com/graphics/assets/img/facebook.png"><img class="white" src="http://www.bloomberg.com/graphics/assets/img/facebook_w.png"></div>
-          </div>
-        </div>
-
-        <div class="clearboth"></div>
-
-
-
-
-
-<div id="header">
-<div class="title center">
-  <h1>KETAMINE TO THE RESCUE</h1>
+<div class="heddd">
+THE
+<br/>MIRACLE
+<BR/>OF
 </div>
-
-</div>
-
 
 <article>
+<div class="inner center">
 
- <div id="inner" class="center">
+<p>For the judeo-western inspiration, it is a mistake of the first magnitude to place too much value on the things of this world. Those who busy themselves with the meaningless ideologies of politics, or with the interminable drama of human soap operas, or with the limitless accumulation of wealth, are losing sight of the impending catastrophe that may unfold towards the end of history. The entire human order could unravel in a relentless escalation of violence — famine, disease, war, and death. The final book of the Bible, the Book of Revelation, even gives a name and a place: The Battle of Armageddon in the Middle East is the great conflagration that would end the world. Against this future, it is far better to save one’s immortal soul and accumulate treasures in heaven, in the eternal City of God, than it is to amass a fleeting fortune in the transient and passing City of Man.</p>
+<p>For the rationalists of the eighteenth and nineteenth centuries, as well as for all those who consider themselves cosmopolitan today, this sort of hysterical talk about the end of the world was deemed to be the exclusive province of people who were either stupid or wicked or insane (although mostly just stupid). Scientific inculcation would replace religious indoctrination. Today, we no longer believe that Zeus will strike down errant humans with thunderbolts, and so we also can rest peacefully in the certain knowledge that there exists no god who will destroy the whole world.</p>
+
+<img src="guy.jpg">
+
+<p>And yet, if the truth were to be told, our slumber is not as peaceful as it once was. Beginning with the Great War in <span class="smallcaps">1914</span>, and accelerating after <span class="smallcaps">1945</span>, there has re-emerged an apocalyptic dimension to the modern world. In a strange way, however, this apocalyptic dimension has arisen from the very place that was meant to liberate us from antediluvian fears. This time around, in the year <span class="smallcaps">2008</span>, the end of the world is predicted by scientists and technologists. One can read about it every day in the <span class="italic">New York Times</span>, that voice of the rational and cosmopolitan Establishment. Will it be an environmental catastrophe like runaway global warming, or will it be murderous robots, Ebola viruses genetically recombined with smallpox, nanotech devices that dissolve the living world into a gray goo, or the spread of miniature nuclear bombs in terrorist briefcases?</p>
+<p>Even if it is not yet possible for humans to destroy the whole world, on current trends it might just be a matter of time. The relentless proliferation of nuclear weapons remains the most obvious case in point. The United States became the first nuclear power in <span class="smallcaps">1945</span>; by the <span class="smallcaps">1960</span>s and through the <span class="smallcaps">1980</span>s, at the height of the Cold War, five declared nuclear states (the U.S., the <span class="smallcaps">uk</span>, France, the <span class="smallcaps">ussr</span>, and China) maintained a semi-stable equilibrium (at least as recounted by the historians who know ex post that the Cold War remained cold); as of today, there are two more known nuclear states (India, Pakistan) and perhaps even more (Israel, North Korea). And what if there are <span class="smallcaps">20</span> nuclear powers in <span class="smallcaps">2020</span>, or <span class="smallcaps">50</span> nuclear powers in <span class="smallcaps">2050</span>, armed with Jupiter missiles that can rain down destruction on enemies everywhere? We suspect the answer to this question, for we know that there exists some point beyond which there is no stable equilibrium and where there will be a nuclear Armageddon. A scientific or mathematical calculus of the apocalypse has replaced the mystic vision of religious prophets. <sup><a href="#note1" id="n1" name="n1">1</a></sup></p>
+<p class="firstLetter">O<span class="smallcaps">n the surface</span>, the world’s financial markets remain eerily complacent. For the most part, they remain firmly rooted in the nineteenth century, when the march of History and Progress were more optimistic and certain. Although it encounters perturbations and larger corrections, the climb of the Dow Jones continues on an inexorable north-easterly path.</p>
+<p>The news and business sections seem to inhabit different worlds that coexist on the same planet but rarely intersect. <sup><a href="#note2" id="n2" name="n2">2</a></sup> Most financial actors are content to rule their separate kingdom, and to refrain from unprofitable questions about the integrity of the larger whole. Those who ask too many questions are not given a serious hearing. Like the deranged orators in London’s Hyde Park, the prognosticators of a financial doomsday have been wrong for too long. Consequently, they have been relegated to a marginal role, if for no other reason than that they have lost most of their money and have no significant capital left to invest in anything.</p>
+<p>More generally, apocalyptic thinking appears to have no place in the world of money. For if the doomsday predictions are fulfilled and the world does come to an end, then all the money in the world — even if it be in the form of gold coins or pieces of silver, stored in a locked chest in the most remote corner of the planet — would prove of no value, because there would be nothing left to buy or sell. Apocalyptic investors will miss great opportunities if there is no apocalypse, but ultimately they will end up with nothing when the apocalypse arrives. Heads or tails, they lose.</p>
+<p>In a narrow sense, it seems rational for investors to remain encamped at the altar of the efficient market — and just tend their own small gardens without wondering about the health of the world. A mutual fund manager might not benefit from reflecting about the danger of thermonuclear war, since in that future world there would be no mutual funds and no mutual fund managers left. Because it is not profitable to think about one’s death, it is more useful to act as though one will live forever. <sup><a href="#note3" id="n3" name="n3">3</a></sup></p>
+<p>Such a narrowing of one’s horizon cannot, however, be the last word. After all, there exists some connection between the real world of events, on the one hand, and the virtual world of finance, on the other. For macro investors, it would be an abdication not to wrestle with the central question of our age: How should the risk of a comprehensive collapse of the world economic and political system factor into one’s decisions?</p>
+
+<img src="animation_spark.gif">
+<img src="hap-face.gif">
+<img src="hap-face2.gif">
+<img src="k.gif">
+<img src="k2.gif">
+<img src="k3.gif">
+
+<p>From the point of view of an investor, one may define such a “secular apocalypse” as a world where capitalism fails. Therefore, the secular apocalypse would encompass not only catastrophic futures in which humanity completely self-destructs (most likely through a runaway technological disaster), but also include a range of other scenarios in which free markets cease to function, such as a series of wars and crises so disruptive as to drive the developed world towards fascism, anarchy, or both.</p>
+<p>Since the direct approach to our central question leads to paradoxes, absurdities, or at best money-losing investment schemes, it might prove more profitable to explore the inverse as a thought experiment: What must happen for there to be no secular apocalypse — for what one might call the “optimistic” version of the future to unfold? And furthermore, which sectors will do well — surprisingly well, in fact — if the world more or less stays intact, even if there are some major bumps and dislocations along the way? <span class="italic">Any investor who ignores the apocalyptic dimension of the modern world also will underestimate the strangeness of a twenty-first century in which there is no secular apocalypse</span> . If one does not think about forest fires, then one does not fully understand the teleology of each tree — and one badly will undervalue those trees that are immune to all but the greatest of fires. Even in our time of troubled confusion, there exists a chance that some things will work out immeasurably better than most believe possible.</p>
+<p>As we embark on our ambitious voyage to the ends of the earth, one cautionary note is in order. Thought experiments are notoriously misleading. Unlike more rigorous forms of scientific investigation, there are no empirical means to falsify these mental exercises. The optimistic thought experiment exists largely in the mind. The vistas of the mind are not always the same as reality. One could do worse than to ignore Milton’s seductive promise: “The mind is its own place, and in itself, can make a heaven of hell, a hell of heaven. ”</p>
+
+<p>Globalization and the history of bubbles</p>
+
+<p>By definition, the apocalypse would be worldwide in extent. For this reason, the point of departure for our thought experiment centers on the future of worldwide events — that is, on the future of globalization. In this, we are guided by the hope that the right sort of globalization might prevent the apocalypse and give us peace in our time.</p>
+<p>One can begin with the usual bromides and banalities. “Globalization” means a breaking down of barriers between nations; an increase in travel and knowledge about other countries; an increase of trade and competition among and between the peoples of the world, to the point where there is a more or less level playing field in the entire world; and the death of all cultures, in the sense of robust systems that exclude part of humanity. On the level of economics, it means a global marketplace; and on the level of politics, it means the ascension of transnational elites and organizations, at the expense of all localized countries and governments.</p>
+<p>Even these preliminary observations remind one that globalization remains far from complete. Massive barriers to trade remain. The nation-state has not withered away. On the crudest of economic measures — say, the difference between the income of a car factory worker in Detroit and in Shenzhen — the gulf between the present and a truly global future remains vast. And on the level of the <span class="smallcaps">un</span>, the <span class="smallcaps">wto</span>, or Echelon, political unity remains more an aspiration than a reality.</p>
+
+<p>At the same time, the current round of globalization has reached a point equal to or greater than past cycles. As measured by the percentage of tradable <span class="smallcaps">gdp</span>, or the number of people who live in countries different from their place of birth, or even more abstractly, the connectivity of the world, we stand at a level of globalization that compares with the previous peak year of <span class="smallcaps">1913</span>.<sup><a href="#note4" id="n4" name="n4">4</a></sup></p>
+<p>It is beyond the scope of this essay either to enumerate all drivers of these trends or to determine whether the pro- or anti-globalization forces will gain the upper hand in the longer term. Still, the following conclusion seems safe: Since we are very far from any stable equilibrium, the future is likely to be much more or much less globalist than the present.</p>
+<p>A disturbingly large segment of the global population perceives much of globalization to be injurious. Admittedly, the free travel of terrorists among the nations of the world does not make the world a better place; and neither does the unrestricted trade in offensive weapons technologies; and nor does the ability of criminals to launder ill-gotten gains through offshore banks in Antigua or Vanuatu. In an ever-shrinking world, groups that once managed to live in relative peace through separateness feel increasingly threatened, and some react with violence. For every account of globalization that culminates in the capitalist paradise, there are others in which globalization results in world-wide anarchy or tyranny. At a first approximation, the best possible future follows the straight and narrow path between these unappealing alternatives. The narrowness of the path is determined by the combination of the spread of destructive technology and the difficulty of improving human nature.</p>
 
 
 
-<p class="intro">Dennis Hartman had already scheduled his suicide when he decided to try the drug ketamine for the first time. At 46, he’d excelled professionally, working his way up the ranks as a management consultant at Arthur Anderson and Deloitte before going on to become chief executive of a thriving gaming company. All the while he’d masked his unshakable depression. “I became a good actor,” he says. “I never revealed to anyone the degree of my childhood abuse or my dysfunction.” </p>
+<div class="pullQ">Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem.</div>
 
-<p>Then life became unbearable. Antidepressants stopped working; in fact they seemed to make everything worse. “I decided ending my life was the most humane thing to do,” Hartman says. “I set the date a couple months into the future so a couple young family members could finish the school year before I traumatized them badly.”</p>
+<p>In contrast to the divergent future worlds of globalization, all versions of anti-globalization are incoherent. Of course, one can imagine various details: less trade and travel; more robust boundaries; the elimination of <span class="smallcaps">ngo</span>s; and a turning back of the clock, so as to restore cultural institutions that are in the process of breaking down. But the pieces do not add up, at least not on the level of the whole world. By its very nature, anti-globalization cannot be a global political agenda. Every worldwide conference or gathering of anti-globalization activists or politicians necessarily dissolves into self-contradiction — or worse, becomes a deceptive cover for some bad version of globalization, such as a worldwide communist revolution.</p>
+<p>While it is theoretically possible for individuals and small communities to opt out of globalization and its benefits, in practice this is not an option that all people in all countries will choose, at least not based on their own free will. The momentum towards globalization is hard to resist or to reverse. As a striking case in point, consider that even North Korea, perhaps the most autarchic state in the world, presents no exception to this rule. The country has encouraged a certain dysfunctional version of global trade, as it exports heroin, ballistic missiles, and counterfeit currency, so that its governing clique can import cognac, German cars, and Swedish prostitutes.</p>
+<p>Although the trend towards globalization will not end by individual choice and cannot end by coordinated global action, one other possibility does remain. Globalization may end by accident or by terrible miscalculation: It may end by world war. <sup><a href="#note5" id="n5" name="n5">5</a></sup> Because there would be no winners in a new world war, every path away from globalization will end in catastrophe. Thus, in spite of the many uncertainties surrounding the costs and benefits of a more globally integrated world, investors have no choice but to bet on globalization. <span class="italic">There are no good investments in a twenty-first century where globalization fails</span> <sup><a href="#note6" id="n6" name="n6">6</a></sup></p>
+<p class="firstLetter">T<span class="smallcaps">he idea of</span> globalization is not new. It is coeval with the modern West. Starting in the seventeenth century, the dawn of the modern era, the global state or market has become the sine qua non for this-worldly peace and security.</p>
+<p>This already is implicit in the writings of Thomas Hobbes, the definitive political philosopher of modernity. For Hobbes, the natural state must be replaced by an artificial or virtual world over which humans have full mastery and control. The telos is replaced by the fear of the end, or the fear of death. <sup><a href="#note7" id="n7" name="n7">7</a></sup> And so the classical virtues, such as courage, magnanimity, or wisdom, give way to peaceableness as the greatest good. In the state of nature, the war of all against all prevails; but under the artificial human world of the social contract, humans will become citizens by giving a monopoly on violence to the figure of Leviathan, a powerful monster that lives at sea. To make explicit what is implicit, Leviathan cannot be merely the master of a given nation or kingdom, since then the state of nature would still prevail amongst nations and kingdoms. For Hobbes’ City of Man to be built, Leviathan must rule all nations and kingdoms and truly be the prince of this world. He is the “mortal god” created by the mind of man.</p>
+<p>The ideas of Hobbes were elaborated and developed by John Locke, the philosopher of the American founding, and by Adam Smith, whose <span class="italic">Wealth of Nations</span> founded the modern science of economics. Locke and Smith sought to construct an ever greater Leviathan, in which systems of checks and balances in the sphere of politics, or global trade and commerce in the sphere of economics, would rule the world.</p>
+<p>In the self-understanding of nineteenth-century Britain, history culminated in the empire of commerce. The British Empire justified its existence because it guaranteed a sphere within which free trade would take place among the nations of the world. <sup><a href="#note8" id="n8" name="n8">8</a></sup> Because trade and commerce occurred at sea, Britain would remain the leading power so long as it ruled the sea. It is no coincidence that the naval armaments race with Wilhelmine Germany foreshadowed the eclipse of globalization in the terrible years after <span class="smallcaps">1914</span>.</p>
+<p>The Continent shared the ideal of globalization, without the capitalist part. Hegel dreamed of a final synthesis in which conflict would cease and give way to a peaceful and homogeneous world. He believed this took place at the Battle of Jena in <span class="smallcaps">1806</span>, in which the forces of the universal Enlightenment prevailed over the old order. <sup><a href="#note9" id="n9" name="n9">9</a></sup> Marx placed these ideas a bit further into the future, when the liquidation of all classes would bring about the workers’ paradise. Even Nietzsche, the least peaceable of the philosophers, thought it best for the blond beast and the natural aristocracy to dominate the planet from Europe.</p>
+<p>This brief survey hints at the critical importance of the globalization project to the modern West. At various points, like a mirage in the desert, the goal of the project has seemed almost within reach, only to fail or be postponed every time, at least thus far. For the past three centuries, the great rises and falls of the West track the high and low points of the hope for globalization. And whether by cause or effect or both, the abstract hopes of a global order also are mirrored in the virtual world of money and finance. The rises and falls of the globalizing West have been tracked by the peaks and valleys of the stock market. <span class="italic">Almost every financial bubble has involved nothing more nor less than a serious miscalculation about the true probability of successful globalization</span> .</p>
+<p class="firstLetter">O<span class="samllcaps">ne already can</span> discern this theme in the first great financial manias of the modern world, the twin booms of <span class="smallcaps">1720</span> that swept France and Britain. In France, one had the System of John Law, one of the greatest financial innovators and charlatans of all time. The System’s central plan was for the nearly bankrupt kingdom to achieve solvency by securitizing its debts through the newly chartered Mississippi Company, whose newly issued paper currency would be backed by the future proceeds from the New World. <sup><a href="#note10" id="n10" name="n10">10</a></sup> Speculation reached fevered proportions, as investors scrambled for shares in the Mississippi Company (later renamed the Company of the Indies) — and so a somewhat meritorious idea evolved into a catastrophic financial bubble. At the height of the boom, the value of the Company approached the value of France itself — much as the market capitalization of the New Economy during the Internet bubble of <span class="smallcaps">1999</span>–<span class="smallcaps">2000</span> rivaled the capitalization of the entire Old Economy.<sup><a href="#note11" id="n11" name="n11">11</a></sup> The key turning point occurred as investors realized that globalization would be much harder and take much longer: In the year <span class="smallcaps">1720</span>, the entire Louisiana Territory had a population of a few thousand Frenchmen, mostly criminal types residing in the fetid backwater of New Orleans. Respectable people did not really want to move to the New World. <sup><a href="#note12" id="n12" name="n12">12</a></sup> In the minds of the speculators, one could perceive a future capitalist paradise even though at the time there existed only a vast wild land inhabited by wild and savage men; as the bubble receded, that great vision of the future seemed to be but a dream. <sup><a href="#note13" id="n13" name="n13">13</a></sup> France’s finances never recovered. The next real plan to resolve them, a tax increase by the Estates General in <span class="smallcaps">1789</span>, triggered revolution and the abolition of the monarchy.</p>
+<p>In the case of Britain, the financial mania of <span class="smallcaps">1720</span> centered on the South Sea Company, which proposed to open the South Seas (and all the great wealth therein) to trade with Britain. By trading with the opposite pole of the globe, the British empire of commerce would become universal. In the accompanying boom, a set of new ventures were floated. Because of the speculative nature of these companies, they were called “Bubbles” — and provided the origin of the term. The Bubble companies included ones “for the importation of Swedish iron,” “for insuring of horses,” “for importing beaver fur,” “for importing tobacco, and exporting it again to Sweden and the north of Europe,” “for trading in hair,” “for carrying on a trade in the river Orinoco,” “for the transmutation of quicksilver into a malleable fine metal,” and even “for carrying on an undertaking of great advantage; but nobody to know what it is” <sup><a href="#note14" id="n14" name="n14">14</a></sup> — and whose promoter promptly fled Britain with the proceeds of the offering, never to be heard from again. As in France, the bubble burst as investors realized that the commercial unification of the globe would prove more stormy and treacherous than expected. The shares began their precipitous decline with the arrival of an unfriendly missive from King Philip <span class="smallcaps">V</span> of Spain, who refused to open the port cities of South America (in Chile and Peru) to the trading ships of the South Sea Company. <sup><a href="#note15" id="n15" name="n15">15</a></sup> Economic integration between Catholic Spain and Protestant England would have to wait; not until <span class="smallcaps">1986</span> would Spain enter the European Union (albeit no longer with the power to force capitalist change in left-leaning Latin America). The bubble ended in tears: Accounting frauds were uncovered, the directors of the South Sea Company were found to have engaged in insider selling (all the while pretending to be engaged in insider buying), and the very concept of a joint stock company (in which the founders were not personally liable for a company’s obligations) was simply outlawed by Parliament for the next hundred years <sup><a href="#note16" id="n16" name="n16">16</a></sup> — a reaction even more extreme than the misguided Sarbanes-Oxley rules that followed the Internet, Enron, and WorldCom busts of <span class="smallcaps">2000–02</span>. The British stock market did not recover its level of <span class="smallcaps">1720</span> until <span class="smallcaps">1815</span>, when the victory at Waterloo promised a less divided world for the nineteenth century.</p>
+<p>As one fast-forwards through the centuries of the modern world, the pattern repeats. In the late nineteenth century, railroad companies were at the center of financial speculation because they provided the locomotive for uniting the world. In the years that preceded <span class="smallcaps">1914</span>, the financial boom centered on the economic development of far-away places, most notably Russia, the great power whose peaceful integration into Europe would have enabled a more stable twentieth century.</p>
+<p>In the boom of the <span class="smallcaps">1920</span>s, the speculation focused on car companies (of which no fewer than <span class="smallcaps">300</span> were created in the U.S.) and on radio businesses, two technologies that promised to bring the world together. <span class="smallcaps">rca</span> in <span class="smallcaps">1929</span> was the <span class="smallcaps">aol</span> of <span class="smallcaps">1999</span>; whereas the Dow subsequently declined by about <span class="smallcaps">88</span> percent, shares in <span class="smallcaps">rca</span> fell by over <span class="smallcaps">97</span> percent as the hopes for globalization abated.<sup><a href="#note17" id="n17" name="n17">17</a></sup> Near the peak of the boom, in <span class="smallcaps">1928</span>, the nations of the world signed the Kellogg-Briand treaty, which outlawed all war in anticipation of a globally unified world. Within two years, this bubble had burst. In <span class="smallcaps">1930</span>, Congress enacted the Smoot-Hawley tariff — a declaration of a global trade war, as it were — and the collapse of the globalizing economies began in earnest. The nadir of globalization (and of the equity markets, as measured globally in inflation-adjusted terms) was not reached until <span class="smallcaps">1949</span>, when China became Maoist, and the most populous country in the world effectively seceded from the rest of humanity.</p>
+<p><span class="italic">Financial bubbles and exaggerated stories about globalization are nearly synonymous because the greatest uncertainties about the future of the world have involved questions about the rate and the nature of globalization</span> <sup><a href="#note18" id="n18" name="n18">18</a></sup> Such great uncertainty is the precondition for the great errors needed for great bubbles. Investors’ hopes and fears about the future will concentrate in those areas most levered to globalization. Conversely, it is unlikely that one could even start a mania surrounding the shares of a utility company or a regional business in secular decline, where the range of possible outcomes is more limited. <sup><a href="#note19" id="n19" name="n19">19</a></sup></p>
+<p>Even the most preposterous bubbles of recent decades — Japan in the late <span class="smallcaps">1980</span>s and high-end real estate today — would have been far more restrained, had they not been stoked much further by the narrative of globalization.</p>
+<p>In the case of Japan, the most insular of developed countries, the bubble of the late <span class="smallcaps">1980</span>s took off as people began to believe that Japan Inc. might actually run the entire planet. Management textbooks declared that the Japanese corporate model represented a sort of Hegelian final synthesis for harmonious labor-management relations; because no better model existed, Japanese corporatism represented the end of history. <sup><a href="#note20" id="n20" name="n20">20</a></sup> Zaitech financial engineering, under the auspices of the omniscient <span class="smallcaps">miti</span>, would do the rest. Only by drawing this extraordinary conclusion could the Nikkei account for almost half the world’s market capitalization in <span class="smallcaps">1989</span><sup><a href="#note21" id="n21" name="n21">21</a></sup> — and could the land underneath the emperor’s palace in downtown Tokyo be deemed to be more valuable than the entire state of California.<sup><a href="#note22" id="n22" name="n22">22</a></sup></p>
+<p>One sees the same with the real estate mania of recent years, where necessarily local markets have been sold and oversold as the keys to the global economy. The greatest booms have taken place in the cities that will centralize the world of the future: Shanghai for China, Dubai for the Middle East, Manhattan for the U.S., <sup><a href="#note23" id="n23" name="n23">23</a></sup> and above them all, the city of London, which seems destined to become once more the City of London and therewith the City of Man, or at least of the world’s billionaires (which may be the same thing). As of early <span class="smallcaps">2007</span>, the boom in London had reached the point at which realtors specializing in large estates had almost nothing left to sell, as most of the properties have been taken off the market by Saudi royals, Russian oligarchs, and Indian industrialists.</p>
 
-<p>In Tkmonth of 2011CK, while waiting to kill himself, Hartman discovered online that the National Institutes of Health were enrolling treatment-resistant patients in a study on ketamine. The drug, a generic anesthetic, had been shown to lift severe depression, often in a matter of just hours. “In the middle of the night I sent them an email,” recalls Hartman. Days later, he found himself in a hospital hooked up to an intravenous ketamine drip. “It was the moment of my life,” he says. “Within a few hours I could tell that my anxiety and depression were completely gone for the first time in my memory.”</p>
+<p>The greatest globalization story ever</p>
 
-<p>After the study, Hartman dropped everything and began promoting ketamine. He also launched the Ketamine Advocacy Network to help others locate a handful of doctors who’d opened ketamine clinics to offer the experimental treatment.</p>
-h
-<p>Four years later, ketamine still hasn’t been approved as an antidepressant therapy but doctors are increasingly taking advantage of the fact that they can legally administer and prescribe the anesthesia drug off label. “I personally know of 30 clinics or solo practices offering ketamine infusions,” says Hartman. “I estimate that there are at least 20 more…who do not advertise.” At least two physicians are forging plans to expand into a dozen or more locations within the next couple years. Meanwhile, clinics can barely keep up with demand from desperate patients who pay anywhere from $300 to $1000 for each 45-minute infusion. </p>
+<p>In recent years, the pace and amplitude of these booms has accelerated tremendously, in complete contradiction to the widespread notion that markets are becoming more smooth and efficient over time. During the last quarter century, the world has seen more asset booms or bubbles than in all previous times put together: Japan; Asia (ex-Japan and ex-China) pre- <span class="smallcaps">1997</span>; the internet; real estate; China since <span class="smallcaps">1997</span>; Web <span class="smallcaps">2.0</span>; emerging markets more generally; private equity; and hedge funds, to name a few. Moreover, the magnitudes of the highs and lows have become greater than ever before: The Asia and Russia crisis, along with the collapse of Long-Term Capital Management, provoked an unprecedented <span class="smallcaps">20</span>-standard-deviation move in financial derivatives in <span class="smallcaps">1998</span><sup><a href="#note24" id="n24" name="n24">24</a></sup> the Nasdaq at <span class="smallcaps">5,000</span> in <span class="smallcaps">2000</span> was farther from equilibrium than the Dow at <span class="smallcaps">350</span> in <span class="smallcaps">1929</span>, perhaps the greatest previous distortion; no <span class="smallcaps">10</span>-year government bond yield ever fell to <span class="smallcaps">0.44</span> percent in all of history, until this happened with <span class="smallcaps">jgb</span>s in <span class="smallcaps">2003</span>; as measured by the buy/rent ratio (or any number of other indicators), U.S. real estate prices in <span class="smallcaps">2005</span> were more distorted than in <span class="smallcaps">1929</span>&lt;, <span class="smallcaps">1979</span>, or <span class="smallcaps">1989</span>, or at any other time in history; and no emerging market had ever reached a <span class="smallcaps">p/e</span> of <span class="smallcaps">62</span>, as China’s Shanghai <span class="smallcaps">a</span> Shares index did in <span class="smallcaps">2007</span>. It has not been a good time for those investors who are merely sane.</p>
 
-<p>Ketamine, a synthetic drug developed in 1962, has long been used in operating rooms as a general anesthetic for both humans and animals. Doctors also administer infusions for post-operative and neuropathic pain. Because subanesthetic doses can induce hallucinations and out-of-body experiences, ketamine became popular, starting in the 70’s, as a recreational drug for New Age spiritualists and partiers alike. Informally it became known as Special K, or Vitamin K, and was said to put some users in a trace-like “k-hole,” making it difficult for them to move and see. In 1999, America banned non-medical use, designating ketamine a schedule III controlled substance, meaning that it has moderate to low potential for physical or psychological dependence. </p>
 
-<p>That same yearCK, Yale researchers stumbled upon the drug’s promise as a mood stabilizer. They’d set out to study depression as affected by glutamate, a neurotransmitter involved with brain function, including memory, learning, and emotion. To do so, they exposed seven clinically depressed subjects to ketamine, which is known to blockCK glutamate receptors in the brain. “We were not thinking at the time that ketamine would be an antidepressant,” says Dennis Charney, one of the scientists, who is now dean of Mt Sinai’s School of Medicine in Manhattan. “When patients started telling us they were better…we’d ask, Are you sure?!”</p>
+<div class="pullQ">Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem.</div>
 
-<p>The group’s findings, published in the Biological Psychiatry journal, were met with silence. The study was tiny and, “because ketamine had been abused, people were reluctant [to perform follow-up tests],” says Charney. “And they didn’t believe you could get better from depression in a few hours—they’d never seen that before.” After all, standard antidepressants like Prozac and Wellbutrin, take weeks if not months to kick in, and frequently don’t work at all.  </p>
+<p>Consider the strangeness of the American context. One would not have thought it possible for the internet bubble of the late <span class="smallcaps">1990</span>s, the greatest boom in the history of the world, to be replaced within five years by a real estate bubble of even greater magnitude and worse stupidity. Under more normal circumstances, one would not have thought that the same mistake could happen twice in the lifetimes of the people involved. One might be tempted to invoke extraordinary psychosocial explanations — for example, that all of this was driven by baby boomers who destroyed their minds on drugs in the <span class="smallcaps">1960</span>s and therewith merit the dubious distinction of being America’s Dumbest Generation. But when one surveys the many other bubbles that have proliferated throughout the world, one realizes that this cannot be the whole truth.</p>
+<p>The most straightforward explanation begins with the view that all of these bubbles are not truly separate, but instead represent different facets of a single Great Boom of unprecedented size and duration. As with the earlier bubbles of the modern age, the Great Boom has been based on a similar story of globalization, told and retold in different ways — and so we have seen a rotating series of local booms and bubbles as investors price a globally unified world through the prism of different markets.</p>
+<p>Nevertheless, this Great Boom is also very different from all previous bubbles. This time around, globalization either will succeed and humanity will achieve a degree of freedom and prosperity that can scarcely be imagined, or globalization will fail and capitalism or even humanity itself may come to an end. The real alternative to good globalization is world war. And because of the nature of today’s technology, such a war would be apocalyptic in the twenty-first century. <span class="italic">Because there is not much time left, the Great Boom, taken as a whole, either is not a bubble at all, or it is the final and greatest bubble in history</span> .</p>
+<p>But because we do not know how our story of globalization will end, we do not yet know which it is. Let us return to our thought experiment. Let us assume that, in the event of successful globalization, a given business would be worth $ <span class="smallcaps">100</span>/share, but that there is only an intermediate chance (say <span class="smallcaps">1:10</span>) of successful globalization. The other case is too terrible to consider. Theoretically, the share should be worth $ <span class="smallcaps">10</span>, but in every world where investors survive, it will be worth $<span class="smallcaps">100</span>.<sup><a href="#note25" id="n25" name="n25">25</a></sup> Would it make sense to pay more than $<span class="smallcaps">10</span>, and indeed any price up to $<span class="smallcaps">100</span>? Whether in hope or desperation, the perceived lack of alternatives may push valuations to much greater extremes than in nonapocalyptic times.</p>
+<p>The reverse version of this sort of investment would involve the writing of insurance and reinsurance policies for catastrophic global risk. In any world where investors survive, the issuers of these policies are likely to retain a significant portion of the premium — regardless of whether or not the risks were priced correctly ex ante. In this context, it is striking that Warren Buffett, often described as the greatest investor of all time, has shifted the Berkshire Hathaway portfolio from “value” investments (no internet, no growth, often just businesses with stable cash flows) to the global insurance and reinsurance industries (perhaps one of the purest bets on the optimistic thought experiment).<sup><a href="#note26" id="n26" name="n26">26</a></sup></p>
+<p>If the preceding line of analysis is correct, then the extreme valuations of recent times may be an indirect measure of the narrowness of the path set before us. Thus, to take but one recent example, in <span class="smallcaps">1999</span> investors would not have risked as much on internet stocks if they still believed that there might be a future anywhere else. Employees of these companies (most of whom also were investors through stock option plans) took even greater risks, often leaving stable but unpromising jobs to gamble their life fortunes. It is often claimed that the mass delusion reached its peak in March <span class="smallcaps">2000</span>; but what if the opposite also were true, and this was in certain respects a peak of clarity? Perhaps with unprecedented clarity, at the market’s peak investors and employees could see the farthest: They perceived that in the long run the Old Economy was surely doomed and believed that the New Economy, no matter what the risks, represented the only chance. Eventually, their hopes shifted elsewhere, to housing or China or hedge funds — but the unarticulated sense of anxiety has remained.</p>
+<p>Such an extreme combination of hope and despair can be found in many places. On the level of the individual, there is the aspiring actor or model in Los Angeles, dreaming that the crowd’s indifference may transform itself overnight into the adulation of the global audience. On the level of the nation, there is Israel, where entrepreneurs are racing to build the world’s next great technology companies, against a background in which everything might be destroyed overnight. There was a time when one would have singled out the actor in <span class="smallcaps">la</span> or the émigré to Israel as suffering from a divided consciousness of sorts, but that time is past. All of us now find ourselves in a similar predicament.</p>
+<p>Just as the risk of a secular apocalypse defines the limits of our world, one might speak of the risk of a “personal apocalypse” that defines the limits of our lives. By way of illustration, the subprime housing boom in the United States is not simply the result of extreme optimism about the prospects for housing, but also a reflection of the brutal fact that tens of millions are approaching retirement in an actuarially bankrupt state. In effect, the two choices are: <span class="smallcaps">1</span>) continue on the present course to certain destitution in old age; or <span class="smallcaps">2</span>) roll the dice on the housing boom as the last chance to build wealth, and hope against hope that one gets out in time. The personal and secular levels intersect, in that lives of quiet desperation paradoxically may surface as ebullient market bubbles.</p>
 
-<p>Six years after the initial findings, Charney, who’d gone on to work for the National Institutes of Health, instigated a replica study using 17 patients. “This was a population that had failed on average six different anti-depressants and some had also failed electro convulsive therapy, which is generally regarded as a treatment of last resort,” says Husseini Mangi, one of Charney’s co-authors, who is now global head of neuroscience for Johnson & Johnson. The results concluded that more than 70 percent of test subjects went into remission within 24 hours following their ketamine infusion. Since then, scientists have performed dozens more studies that confirmed the drug’s impact.</p>
 
-<div class="pullQ">
-  Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+<img src="clinic.jpg">
+
+<p>None of the foregoing detracts from the earlier claim that the greatest investments of our time remain those most highly levered to genuine globalization. But because the line between good and bad (or no) globalization is very thin, catastrophic approximations abound. The difficulty of the challenge can be illustrated by considering three related examples: the “China bubble,” the “Web <span class="smallcaps">2.0</span> bubble,” and the “hedge fund bubble,” which relate to the globalization of labor, technology, and finance, respectively, and are properly seen as contemporary facets of the Great Boom. They are the dark matter that is reshaping the human world — and that may hopefully counteract the dark energy that is making things fall apart.</p>
+
+<p>The “China” bubble</p>
+
+<p>The rise of China seems to be the most important political trend of the new millennium. If its annual growth rate of <span class="smallcaps">10</span> percent a year can be sustained, China will become the world’s leading economic power in about <span class="smallcaps">20</span> years. Never before would so many people have been lifted out of poverty in so short a time. On the other hand, there remains the unanswered question of how China will use its newfound power.</p>
+<p>With respect to the rest of the world, China’s emergence will be a positive development so long as it remains deflationary. Under the free trade theories of Smith and Ricardo, the globalization of the labor market will make goods cheaper for consumers throughout the developed world, and the benefits of cheaper goods should more than offset the costs of displaced industries and workers.</p>
+<p>An important caveat to this free-trade regime is that it depends on a static world of sorts: If China’s economy achieves significant internal growth and China begins to consume more resources, especially energy, then its growth may prove less beneficial for Western consumers. Money saved on cheaper goods at Wal-Mart would then need to be spent on more expensive gasoline at the pump. In the world of Peak Oil, China’s emergence may represent a dangerous development, at least in the intermediate term.<sup><a href="#note27" id="n27" name="n27">27</a></sup></p>
+<p>However that may be, <span class="italic">there is no good scenario for the world in which China fails</span>. The short-term consequences of such a failure would include a lack of cheap capital from a Chinese savings glut; fewer cheap goods from China; massive political unrest within China; and deep recessions throughout East Asia and most emerging markets, whose derivative growth is the caboose to China’s locomotive. And so we are led to ask: To the extent that China involves a leveraged play on globalization, should one therefore simply invest in the Chinese stock market? In our optimistic thought experiment, one might expect China to outperform the rest of the world in every good scenario.</p>
+<p>If there is a catastrophic approximation embedded in this analysis, then it consists of the conflation between China as a real economy and “China” as a financial instrument. To say the least, there are many eerie parallels between the Chinese stock market of early <span class="smallcaps">2007</span> and the Nasdaq of early <span class="smallcaps">2000</span>: an abstract story of long-term, exponential growth; rampant speculation; and unprofitable or overvalued companies.</p>
+<p>One intermediate possibility is that the China of <span class="smallcaps">2014</span> will be like the internet of <span class="smallcaps">2007</span> — much larger, but with winners very different from the ones that investors today expect. The largest New Economy business is Google, a company that scarcely registered in early <span class="smallcaps">2000</span>. Might it also turn out that the greatest Chinese companies of <span class="smallcaps">2014</span> will be concerns that are private and tightly controlled businesses today, rather than the high-profile and money-losing companies that have been floated by the Chinese state?</p>
+<p>At the very least, outsiders need to understand that China is controlled for the benefit of insiders. The insiders know when to sell, and so one would expect the businesses that have been made available to the outside world systematically to underperform those ventures still controlled by card-carrying members of the Chinese Communist Party. “China” will underperform China, and a “China” bubble exists to the extent that investors underestimate the degree of this underperformance.<sup><a href="#note28" id="n28" name="n28">28</a></sup></p>
+<p>This limitation also may be framed in terms of globalization. In important respects, “China” as a financial economy is sustained by the absence of globalization — in particular, by the enormous amounts of capital trapped within China’s borders that must either suffer slow death from inflation (now running higher than Chinese bank deposit rates) or brave the acute sense of vertigo of the elevated stock market. Because the free convertibility of the renminbi would dampen equity speculation, a long “China” position is not a forecast that financial globalization will succeed, but rather a bet that its internal contradictions will persist.</p>
+
+<p>The “technology” bubble</p>
+
+<p>The growth of the internet promises to unite the human race in an unprecedented way. For the first time, through email, blogs, and websites, the stories of each of our lives can be shared, across the boundaries of a still-divided political and cultural world. Moreover, this momentum seems unlikely to reverse, even if there is significant turbulence in the years ahead. One must not forget that the U.S. military funded the internet as a communications platform to survive even a limited nuclear war.</p>
+<p>As with China, the next generation of technology businesses represents a leveraged bet on globalization. But unlike China, the internet already has seen one large boom and bust cycle. The valuations may be a bit more reasonable this time around, as investors continue to climb a wall of worry and think about the possibility of a second internet crash.</p>
+<p>There are some promising signs. The next generation of internet businesses cost less in computing power; revenue models have become more robust; growth remains fast; and more entrepreneurs are focused on perfecting their products than on issues of salesmanship.</p>
+<p>On the other side, however, there exists one decisive problem. Virtually no Web <span class="smallcaps">2.0</span> companies have sold stock to the public through <span class="smallcaps">ipo</span>s. If one desired to deploy substantial capital into the next wave of internet businesses, this would prove almost impossible to do. Even with respect to venture capital and angel investing, the extreme distribution of outcomes imposes a severe challenge on any positive expected returns. <sup><a href="#note29" id="n29" name="n29">29</a></sup></p>
+<p>For those determined to proceed, the following guidepost might be useful. As with the distinction between China and “China,” there also exists a critical distinction between technology and investments called “technology.” To take a particularly easy case from the prior technology bubble, a “technology” company that sells pet food online by purchasing Super Bowl advertisements offline may not be a technology company at all. The solutions to hard engineering problems are not necessarily valuable, but it is unusual for the solutions to easy engineering problems to have much value in the long term.</p>
+<p>A more subtle “technology” bubble may be occurring this time. A large number of large capitalization companies are effectively short innovation: companies such as Microsoft, Dell, <span class="smallcaps">ibm</span>, Cisco, <span class="smallcaps">hp</span>, and others. They benefit by modest changes to the status quo, but are threatened by massive innovation. This does not mean there are not massively innovative companies out there: Google and Intel, to name the two best-known brands, are. Merely, there is a difference between technology and “technology.” After all, even <span class="smallcaps">gm</span> uses an impressive amount of electronics and computers.</p>
+<p>Technology entrepreneurs and investors would do well to return to hard and important problems. As globalization proceeds apace, the decisive unsolved problem concerns the issue of security. There remains a tremendous need for real defense against the proliferation of destructive technologies — reaching well beyond the Orwellian “defense” industry, with its proclivity for constructing new contraptions that kill large numbers of people. Along with the New Economy and New Media, there should exist a valuable sector that could be described as New Defense — at least in any twenty-first century in which humanity does not blow itself up. The absence of such a sector serves as a subtle reminder of the complacent myopia of Silicon Valley venture capitalists investing in “technology.”</p>
+
+<div class="pullQ">Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem.</div>
+
+<p>The “hedge fund” bubble</p>
+
+<p>Broadly speaking, hedge funds buy and sell mispriced assets. In today’s globalizing and unbalanced world, there are many seemingly mispriced assets and correspondingly many opportunities to pursue ever-increasing fortunes.</p>
+<p>If the Great Boom ends well, then the hedge fund industry will outperform other sectors less levered to globalization; in that future, there would turn out to have been no hedge fund bubble, just as there ultimately would be no China or technology bubbles. Inversely, a world where global financialization stops is a bad world for hedge funds, but also for just about everything else. In such a world, global investing would no longer be possible. So would it be correct to invest in hedge funds as a way to invest in the Great Boom?</p>
+<p>As in the case of China and technology, one may draw a critical distinction between hedge funds and “hedge funds.” The distinction centers on the question of which kinds of assets are genuinely mispriced for the path towards good globalization.</p>
+<p>Hedge funds (and “hedge funds”) seek high returns without the regulations that hamstring mutual funds and using leverage unavailable to mutual funds and even (except to a limited extent) to individual investors. The difference between a hedge fund and a “hedge fund” is this: a hedge fund seeks to allocate capital from less efficient uses to more efficient uses; a “hedge fund” seeks trading strategies. Mostly, “hedge funds” merely seek to replicate successful strategies of the past until they don’t work.</p>
+<p>As with China/“China” and technology/“technology,” the existence of middle cases of entities that are neither pure hedge fund nor pure “hedge fund” does not rob the distinction of meaning. And the difference is not be confused with belief in efficient markets. To the contrary, the proliferation of “hedge funds” insures that there are plenty of market inefficiencies for profitable trading.  </p>
+<p>Thus, the widespread strategy of “short low-risk, long high-risk” may not be equivalent to “long good globalization,” at least not in every specific context. Ultimately, one might expect a convergence between the emerging and developed markets; but if one ignores the serious issues of corruption and bad governance in the emerging world and correspondingly overvalues those markets, then one will not reward the kind of behavior that leads to good globalization, and good globalization may become less likely. Or, to take an even more obvious example: Good globalization is more likely to occur in a world where people have a long time horizon. Subprime credit, payday loans, housing consumption dressed up as housing “investment,” and depletion of energy (and everything else) are all high-risk trajectories that will prove detrimental to the ultimate success of the Great Boom.</p>
+
+<p>More generally, there remains the question of what kinds of things can be bought and sold in a world where the trajectory to good globalization takes place. Are certain kinds of markets simply incompatible with good globalization? The buying and selling of illegal drugs, dangerous weapons, or laundered money may result in great short-term profits but tremendous long-term costs. Where does one draw the correct line between a market for cheap imports and a market for indentured labor in Burma? Or between cheaper diamonds and a bloody war to acquire those diamonds in Congo?</p>
+
+<p>These questions about market limits become most acute with human beings: the elimination of all labor laws (including laws against immigration, child labor laws, or laws setting minimum wages or maximum work weeks), the legalization of pornography and prostitution, the creation of a spot and a futures market for human organs. The culmination of the series would involve the creation of a marketplace for the buying and selling of something like the stuff of the minds of men. And at this point, one could be forgiven for thinking that the “optimistic” thought experiment — which turns out to be nothing more or less than the central idea of modernity — may have gone terribly wrong.</p>
+
+<p>The other way</p>
+
+<p>Ours is an age in which classic wisdom has failed. Those investors who limit themselves to what seems normal and reasonable in light of human history are unprepared for the age of miracle and wonder in which they now find themselves. The twentieth century was great and terrible, and the twenty-first century promises to be far greater and more terrible. Classic investment strategies no longer work in a world where ordinary economic cycles are broken. The limits of a George Soros or a Julian Robertson, much less of an <span class="smallcaps">ltcm</span>, can be attributed to a failure of the imagination about the possible trajectories for our world, especially regarding the radically divergent alternatives of total collapse and good globalization. <sup><a href="#note30" id="n30" name="n30">30</a></sup></p>
+<p>Seven years later, the marke
+ts have come full circle. The retreat towards tactical cleverness hides a lazy agnosticism about the most fundamental questions of our age. Because we find ourselves in a world of retail sanity and wholesale madness, the truly great opportunities exist in the wildly mispriced macro context — rather than in the ever-diminishing spreads on esoteric financial markets or products. Indeed, one could go even further: What is truly frightening about the twenty-first century is not merely that there exists a dangerous dimension to our time, but rather the unwillingness of the best and brightest to try and make any sense of this larger dimension.</p>
+
+<p>From a contrarian perspective, one could be more optimistic if others were not so naively “optimistic.” The best possible world is not an impossible or self-contradictory world. Even in the best possible future, destiny will not be kind to Miami condo brokers, investors underwriting negative-interest rate mortgages, consumers with a naive faith in Saudi Arabia’s infinite oil resources (and an even stranger belief that it is in Saudi’s interest to keep oil prices low), or baby boomers who act as though a negative savings rate is the best investment strategy in a country headed for massive demographic transition. In every possible future, all of today’s bubbles will burst, and their ideological scaffolding will prove to be but lint in the winds of history.</p>
+
+<img src="ketamine.jpg">
+
+<p>The waning of globalization in the near future will be a reaction to the excesses of the recent past.  Bubbles have begun to implode across the globe, laying bare the fraudulence of “China,” “technology,” “hedge funds,” and their like. As the world’s economy weakens, so will support for the globalist orthodoxy, the political tenability of which rests heavily on the ability of the doctrine to literally deliver the goods. Some policymakers seem to sense this already, with the most immediately obvious of these being the Fed. In this view, the Fed’s morally hazardous accommodations are best understood not as a perplexing and facile sop to bankrupt homeowners but as a desperate effort to stave off a recession that will end the debate on globalization for years to come.</p>
+
+<p>As with many last-ditch efforts, the Fed’s gambit entails several potentially catastrophic trade-offs, chief among them the revival of inflation.  Whatever may be said of the soundness of the Fed’s policy in the faltering United States, loose monetary conditions are not appropriate for the near-runaway economies of other nations with dollar-linked economies, notably China and much of the Middle East. The Fed’s iatrogenic policies have already caused considerable inflation in these economies and, especially disturbing for students of history, a massive spike in the price of oil. At some point, the tensions caused by wild inflation, collapsing currency accords, and expensive oil will resolve, but only the most deluded Pollyannas could believe the result will be an increase in global harmony and integration.</p>
+<p>Despite all this, the world may yet resume the globalist path. The narrative of the past four centuries has not been one of continuous progress, but strewn beneath the stories of cupidity and strife there lies the story of the powerful impulse toward globalization and of the transformational effects of technology. In this context, a near-term backlash against globalization should not be confused with the end of the world, though a wholesale rollback could represent the ultimate catastrophe.</p>
+<p>For the policymaker as for the investor, the challenge is to find a way between the Scylla of outdated wisdom and the Charybdis of nihilistic cleverness. The agon between globalization and its alternative will be close — at least in the sense that individual choices will prove to be of decisive significance. In this, we are opposed to the reigning faith in efficient markets.  Unlike the faith in efficient markets, however, ours is a faith that seemingly still cannot be named.</p>
+
+<p class="credit">Peter Thiel is the president and portfolio manager of Clarium Capital Management, a global macro hedge fund, and the chairman of the board of Palantir Technologies, Inc. He co-founded and served as the chairman and CEO of PayPal, Inc., the world’s largest e-payments company.</p>
 </div>
+</article>
 
+<script src="script.js"></script>
 
-<p>Speedy results aside, the science of ketamine is unlike commonly prescribed antidepressants. A single dose tends to relieve depression long after the drug has left the patient’s system—sometimes for as long as week or month, sometimes for more than a year. This is likely because ketamine causes lasting physical changes in the brain, reversing neural damage caused by stress and depression by helping to regenerate atrophied neurons. The drug has also been shown to decrease inflammation, help control cortisol levels, and likely interacts with other biological mechanisms involved in mood regulation. </p>
-
-<p>So why hasn’t ketamine been fast-tracked for Food and Drug Administration approval? The big problem, ketamine advocates say, is that pharmaceutical companies, which usually foot the bill for clinical trials, can’t make money off a decades-old generic drug. Instead, companies like Johnson & Johnson are spending millions to create analogues and derivatives of ketamine that can be patented to generate blockbuster sales. </p>
-
-<p>While big pharma searches for a lucrative ketamine-like product, thousands of suicidal and depressed people are flocking to private ketamine clinics for treatment. The doctors follow existing research protocols when possible. They typically administer six infusions in a course of two weeks, then have patients return for maintenance infusions when necessary. During each treatment, patients are given less than a fifth of the dose they’d get for anesthesia, and it’s administered over the course of 45 minutes rather than all at once. Vitals are carefully monitored throughout. </p>
-
-<p>Steven Levine, an energetic 37-year-old psychiatrist based in Princeton, New Jersey, was probably the first to take the leap and start a ketamine infusion business back in 2011. “When I read the studies, they blew my mind, they almost spun my head around,” he recalls. “I got to the point where I decided, I need to start using this even if other people aren’t--I can’t talk myself out of it, it makes too much sense.” </p>
-
-<img src="https://c2.staticflickr.com/4/3652/3320220662_db9ca69112_b.jpg">
-
-<p>After exhaustively researching ketamine and consulting anesthesiologist about safety and dosing, Levine convinced a local hospital to give him space and assistance to start administering the drug intravenously. “At first, I was so nervous, I’d sit across from the patients during their infusions and constantly ask, ‘Are you okay? Are you okay?’” he says. “Luckily I caught on pretty quickly that I was making them uncomfortable.” </p> 
-
-<p>Soon, Levine realized he needed his own clinic in order to tinker with and perfect his protocol outside the confines of hospital bureaucracy. He also says it’s important for patients to experience ketamine in a peaceful environment, especially because the drug can induce mild hallucination. In March, Levine opened the Ketamine Treatment Centers of Princeton in a medical office building located five minutes outside Princeton by car. The walls are hung with abstract artworks painted by a local psychotherapist. During infusions, which are administered by a former oncology nurse, Levine encourages patietns to listen to relaxing music of their choice. </p>
-
-<p>Under the influence report, many experience strange sensations, like seeing colors and patterns when they close their eyes. “The first time I had sense that the chair was rocketing upwards, just on and on and on…a kind of weightlessness,” one patient explained on a recent Friday. The 51-year-old environmental engineer and university lecturer, who prefers to remain anonymous for professional reasons, credits ketamine with reviving him from a near-catatonic depression that left him unable to look even his wife and children in the eyes. “During the treatment, I got this profound feeling of optimism,” he says. “I told my family it’s like getting hit by the freight train of happiness—they tease me about that now.” </p>
-
-<p>Pharmaceutical companies tend to categorize the dissociative effect of ketamine as an unwanted side effect, but Levine—along with many other researchers exploring the promise of psychedelics in battling depression--argues that the hallucinations are likely harmless, and may even be helpful. “Ultimately, it’s a dreamlike experience,” he says. “We don’t tell people not to sleep because they might dream.” A recent study at U.C. Berkeley, he points out, found that experiencing positive emotions, specifically awe, has an anti-inflammatory effect. Later this year, Levine plans to launch a similar study to evaluate whether patients who experience a stronger dissociative effect during ketamine infusions have better outcomes.  </p>
-
-<p>Over the past four years, Levine says he’s treated roughly 400 patients. He still keeps up a regular psychiatry practice in a second office, but sees about 35 ketamine patients per week. Since insurance generally doesn’t cover infusions, for which he charges $400, he instead bills them for an extended psychiatric visit. “I’m talking with the patients, prescribing medicines, and doing a lot more than the infusions,” he explains.  In terms of income, Levine says his ketamine business is at least as lucrative as his regular practice. “It makes it all the more headscratching why more people aren’t doing this a business,” he says. </p>
-
-
-<p>Glenn Brooks, a New York-based anesthesiologist, began offering ketamine infusions for depression in 2012 after one of his sons committed suicide. “After he died, my wife and I did what most parents would do—scholarship funds, charity organizations, but it was never enough,” says Brooks. “A couple psychiatrists called and inquired whether I’d be interested in treating their patients for depression because they knew I was already using ketamine to treat patients with neuropathic pain--I thought, wow, this is exactly what I need to do.”</p>
-
-<p>Brook’s New York Ketamine Infusions business is located in an office in Manhattan’s financial district, half of which he shares with a podiatrist. Since opening, he’s seen more than 600 depressed patients, many repeatedly. He charges $525 per infusion, but often ends up collecting less, based on his patients’ circumstances. “Nobody gets turn away, especially not if someone calls and is suicidal,” he says. </p>
-
-<p>A workaholic by nature, Brooks shows up seven days a week, often spends 14 hours at the office, and takes off only Thanksgiving. “I go home, I ruin the turkey, and then everyone tells me to go back to work,” he jokes. “Typically I get ten calls and six to ten inquiries online from new patients each day…Patients come from all over, from as far away as Saudi Arabia.” Too busy to wade through his data, Brooks estimate that roughly 80 percent of his patients show miraculous improvement, especially those younger than 60. “For patients who are suicidal—and probably half of my patients are—they can get relief within an hour or two,” he says. “Patients who aren’t suicidal, it’s a little more subtle. It could be six to eight hours.” </p>
-
-
-<img src="http://www.bjui.org/BJUI_IMAGES/cute_editor/ketamine%20bladder%20transverse%20section%20for%20BJUI.jpg">
-
-<p>Brooks scoffs at critics, many of them from pharmaceutical companies, who warn that we don’t yet know the longterm side effects of using ketamine and cite anecdotal evidence that the drug causes bladder problems. “I’ve been working with ketamine for 40 years—I know this drug better than I know my kids,” he says. Ketamine, he adds, has long been used repeatedly, at far higher doses, for pain management with no evidence of side effects.</p>
-
-<p>For years now, Brooks has been mulling plans to train doctors and add new locations. “People are constantly asking me to open a center closer to them,” he says. Last year, he forged a partnership with a longtime ketamine researcher from Stony Brook School of Medicine and a Boston-based business group with expertise in running dental franchises, but he says it’s too early to discuss details. “I would think we’ll add a dozen in the next year or two,” he says. “I’m more of a humanitarian than a businessman, so hopefully these guys in Boston will save me from myself.”</p>
-
-<p>Keith Ablow, who bills himself as “America’s most well-known psychiatrist,” and is known for expressing controversial opinions on Fox News, also has ambitious plans for growing a ketamine treatment empire. Instead of opening freestanding ketamine clinics, his fledgling company Neurogain hopes to raise $1 million this summer to start a network of “250 to 500” doctors who will offer ketamine treatments as a side business. “We believe we can double the salary of the average family physician or internist,” says Ablow. Neurogain, he explains, will keep up to 40 percent of the profits in exchange for providing training, marketing material, a portal through which doctors a can communicate, and a call center that will take care of billing and patient follow-up calls. </p>
-
-<div class="pullQ">
-  Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
-</div>
-
-
-<p>“There are millions and millions of depressed people who can benefit,” says Ablow. “The treatment runs about $3,000 for six IVs…We’re treating everyone from cashiers to CEOs because when you’re depressed, $3000…turns out not to be an impediment for people who have relatives who can help, health savings accounts, or who have a credit card they can draw on, for that matter.” </p>
-
-<p>  Brooks, who nearly went into business with Ablow five years ago, worries that Ablow’s plan isn’t right for patients. “This is 24/7 stuff, not something you can do on the side,” he says. “Unless you can do this fulltime and keep up with the literature, with the paperwork, the demands, you’ll never understand these patients, you’ll never really know what you’re doing.” </p>
-
-<p>Without regulation, many say the ketamine business is rife for missteps and exploitation. “Nobody in Florida knows what they’re doing,” says Brooks, by way of example. His assessment is based on a patient who got a ketamine infusion while on holiday. “It was a friggin’ disaster,” says Brooks. “The dose was too high, it was going in too fast, she started to get hysterical. Meanwhile, the doctor is calling me asking what to do.” Another doctor reportedly gave patients syringes with ketamine to take home and administer themselves. “The business model needs to be right,” says Brooks. “Safety comes first, efficacy second, and everything else follows.”  </p>
-
-<img src="http://images.techtimes.com/data/images/full/5390/depression.jpg">
-
-<p>Most ketamine advocates, including Brooks, are rooting for big pharma to develop an approved ketamine-like drug, even if it’s not ketamine proper. Some companies may be getting close. Johnson & Johnson is seeking approval for esketamine, a patented derivative of ketamine that’s roughly 20 percent more potent. The company this year plans to start phase three clinical trials for an esketamine nasal spray, which the FDA has given breakthrough therapy status. It may receive U.S. approval by 2018, says Mangi, who is spearheading the research. </p>
-
-<p>J&J’s goal is to create a treatment that’s not just bankable but more convenient than intravenous ketamine. To make sure the drug isn’t abused, Mangi says patients will come to the doctor’s office two or three times a week and administer the spray there. “This is such a potentially revolutionary treatment, we don’t want to risk the possibility of something bad happening,” says Mangi. Both Mangi and Charney are patent holders for esketamineCK. </p>
-
-
-<p>Illinois-based pharmaceutical company Naurex last year raised $80 million to perform phase three trails on a ketamine-like drug called GLYX-13, which they say won’t induce hallucinations. Privately held Baltimore company, Cerecor, is also developing a one-a-day pill that replicates ketamine’s effects. “I had one patient who came to me after being part of a Cerecor study and he said it was the best he’d ever felt,” says Brooks. </p>
-
-<p>“I just wish the pharmaceutical companies wouldn’t badmouth ketamine [before there’s an alternative],” Brooks adds. “This drug is in every operating room, every intensive care unit.” </p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <div id="footer">
-            <div class="container">
-              <div class="left"></div>
-              <div class="source">SOURCE:</div>
-              <div class="clearboth">&nbsp;</div>
-            </div>
-          </div>
-
-        </div><!-- id="inner-content" -->
-
-        </article>
-
-        <ul class="t-hide bbg-recirculator index-page__items index-page__top-items"></ul>
-
-
-        <!-- Optional Scripts-->
-
-        <!--
-        <script src="http://www.bloomberg.com/graphics/assets/js/vendor/jquery.min.js?"></script>
-        <script src="http://www.bloomberg.com/graphics/assets/js/vendor/topojson-v1.6.8.min.js?"></script>
-        <script src="http://www.bloomberg.com/graphics/assets/js/vendor/queue.v1.min.js?"></script>
-        -->
-
-        <!-- Required Scripts-->
-        <script src="http://www.bloomberg.com/graphics/assets/js/vendor/lodash.underscore.min.js?"></script>
-        <script src="http://www.bloomberg.com/graphics/assets/js/vendor/d3.v3.min.js?"></script>
-
-        <script type="text/javascript">
-
-          // //Required: Uncomment config block and fill this out
-          // //bb_brand will always have bbiz and optionally one of the following: bpol, bmkt, bpur, btech, bview
-          var config = {
-            'name': 'blp.visual-data:graphics-YOUR-SLUG-HERE',
-            'bb_brand': 'bbiz',
-            'bb_slug': 'YOUR-SLUG-HERE',
-            'bb_author': 'Author Name(s)',
-            'bb_cg_3': 'A long description here',
-            'bb_groupId': 'visual-data/YOUR-SLUG-HERE',
-            'bb_pub_d': '2015-01-01T00:15:00+04:00',
-            'correlator': (new String(Math.random()).substring(2,11)),
-            'ad_code': '', //don't forget leading '/5262' - /5262/business/insights/focus_on_mba
-            'num_ad_scroll_refesh': 3
-          };
-
-          var _sf_async_config = {
-            domain: 'bloomberg.com'
-          }
-        </script>
-
-        <script src='http://www.bloomberg.com/graphics/assets/js/lib/share.js?'></script>
-        <script src='http://www.bloomberg.com/graphics/assets/js/lib/tracker.js?'></script>
-        <script src='http://www.bloomberg.com/graphics/assets/js/lib/recirculator.js?'></script>
-
-<script>
-  var body = d3.select("body");
-  var invert;
-  d3.select(window).on("scroll", function() {
-    var oldInvert = invert;
-    invert = Math.floor(body.node().scrollTop / 1000) % 2 == 1;
-    if(invert !== oldInvert) body.classed("invert", invert);
-  })
-</script>
-
-
-
-        <script type="text/javascript">
-          initShare()
-
-          //stick header to top of page
-          var fixedHeader = null
-          d3.select(window).on('scroll.sticky', function(){
-            var fixedHeader1 = pageYOffset > 120
-            if (fixedHeader != fixedHeader1){
-              fixedHeader = fixedHeader1
-              
-              d3.select('#full-header').classed('stuck', fixedHeader)
-              d3.select('#full-header-space').classed('stuck', fixedHeader)
-            }
-          });
-
-
-
-          (function(){
-
-          //
-          // code for this project
-          //
-
-          })()
-
-        </script>
-    </body>
-</html>
+</body>
