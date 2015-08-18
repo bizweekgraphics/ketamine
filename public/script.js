@@ -69,6 +69,14 @@ d3.select("body").on("mousemove", function() {
   mouse = d3.mouse(this);
 })
 
+d3.select(window).on("resize", function() {
+  canvas
+    .attr("width", innerWidth)
+    .attr("height", innerHeight);
+  ctx.textBaseline = 'middle';
+  ctx.textAlign = "center";
+})
+
 function cycleRadius(t,i) {
   return (20*(10-i)) + 200*(Math.sin(i*t/5000)+1);
 }
