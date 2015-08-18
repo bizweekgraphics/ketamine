@@ -72,7 +72,7 @@ article {
 .heddek div {
   padding: .5em;
 }
-.heddek div:nth-child(1) {
+/*.heddek div:nth-child(1) {
   -webkit-transform: rotate(5deg);
 }
 .heddek div:nth-child(2) {
@@ -80,4 +80,4 @@ article {
 }
 .heddek div:nth-child(3) {
   -webkit-transform: rotate(3deg);
-}
+}*/
