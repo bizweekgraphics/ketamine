@@ -94,7 +94,7 @@ body {
   width: 100%;
   position: relative; left: 0; top: 0;
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 3em auto;
 }
 .onehunna img{width: 100%}
 
@@ -113,6 +113,10 @@ body {
 .decal4{bottom:-150px;right:-150px;}
 .decal5{top:-120px;left:-80px;}
 .decal6{top:150px;left:80px;}
+
+.decal-sm {
+  -webkit-transform: scale(.5);
+}
 
 .center{
    margin: 0 auto;
