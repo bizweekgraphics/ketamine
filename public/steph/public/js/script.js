@@ -1,12 +1,9 @@
-console.log("Tapas are small plates you enjoy with friends");
-
 var body = d3.select("body"),
     mouse = [0,0],
     scrollTop = 0,
-    invert = false,
-    gifs = ["animation_spark.gif", "hap-face.gif", "hap-face2.gif", "k.gif", "k2.gif", "k3.gif"];
+    invert = false;
 
-var canvas = body.select(".opener").append("canvas")
+var canvas = body.append("canvas")
     .attr("width", innerWidth)
     .attr("height", innerHeight);
 
@@ -16,7 +13,7 @@ ctx.textBaseline = 'middle';
 ctx.textAlign = "center";
 ctx.globalCompositeOperation = "xor";
 
-// var hed = d3.select("h1").text();
+var hed = d3.select("h1").text();
 
 d3.timer(function(t) {
 
@@ -39,7 +36,7 @@ d3.timer(function(t) {
 
   // timer:  Math.sin(t/500 + (t/10000)*i)
   // scroll: Math.sin(t/500 + (scrollTop/200)*i)
-  var circles = d3.range(50).map(function(i) { return (10*(50-i) + 5*Math.sin(t/500 + ((scrollTop+620)/200)*i)); }).sort(d3.descending);
+  var circles = d3.range(50).map(function(i) { return (10*(50-i) + 5*Math.sin(t/500 + (scrollTop/200)*i)); }).sort(d3.descending);
   
   ctx.globalCompositeOperation = "source-over";
   circles.forEach(function(d, i) {
@@ -54,30 +51,15 @@ d3.timer(function(t) {
 });
 
 // var invert;
-var invertBreakpoints = d3.selectAll(".inverter")[0].map(function(d) { return d.offsetTop; });
 d3.select(window).on("scroll", function() {
   scrollTop = body.node().scrollTop;
   var oldInvert = invert;
-  invertBreakpoints.forEach(function(d,i) {
-    if(scrollTop > d) {
-      invert = i % 2 == 1;
-    }
-  })
-  if(invert !== oldInvert) {
-    body.classed("invert", invert);
-  }
+  invert = Math.floor(body.node().scrollTop / 1000) % 2 == 1;
+  if(invert !== oldInvert) body.classed("invert", invert);
 })
 
 d3.select("body").on("mousemove", function() {
   mouse = d3.mouse(this);
-})
-
-d3.select(window).on("resize", function() {
-  canvas
-    .attr("width", innerWidth)
-    .attr("height", innerHeight);
-  ctx.textBaseline = 'middle';
-  ctx.textAlign = "center";
 })
 
 function cycleRadius(t,i) {
@@ -141,35 +123,3 @@ function drawZoomingText(t, ctx, text, scrub) {
   };
   // ctx.globalAlpha = 1;
 }
-
-// PULLQUOTES
-// var fizzyText = new FizzyText('Pullquote');
-
-
-// GIFS
-
-var gifInterval = setInterval(function() {
-  var angle = Math.floor(Math.random()*360);
-  var radius = innerWidth / 1.7;
-  var origin = [innerWidth/2, innerHeight/2];
-
-  // console.log("Starting at:");
-  // console.log("top: " + Math.floor(50*Math.sin(angle) + 50)+"%");
-  // console.log("left: " + Math.floor(50*Math.cos(angle) + 50)+"%");
-
-  body.select(".opener").append("img")
-    .attr("src", _.sample(gifs))
-    .style("top", Math.floor(radius*Math.sin(angle) + origin[1])+"px")
-    .style("left", Math.floor(radius*Math.cos(angle) + origin[0])+"px")
-    .style("-webkit-transform", "translate(-50%,-50%) rotate(0deg)")
-    .style("max-width", "200px")
-    .transition()
-    .duration(5000)
-    .ease("linear")
-    .style("top", origin[1]+"px")
-    .style("left", origin[0]+"px")
-    .style("-webkit-transform", "translate(-50%,-50%) rotate(180deg)")
-    .style("max-width", "1px")
-    .remove();
-
-}, 150);
