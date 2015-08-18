@@ -36,7 +36,7 @@ d3.timer(function(t) {
 
   // timer:  Math.sin(t/500 + (t/10000)*i)
   // scroll: Math.sin(t/500 + (scrollTop/200)*i)
-  var circles = d3.range(50).map(function(i) { return (10*(50-i) + 5*Math.sin(t/500 + (scrollTop/200)*i)); }).sort(d3.descending);
+  var circles = d3.range(50).map(function(i) { return (10*(50-i) + 5*Math.sin(t/500 + ((scrollTop+620)/200)*i)); }).sort(d3.descending);
   
   ctx.globalCompositeOperation = "source-over";
   circles.forEach(function(d, i) {
@@ -51,11 +51,18 @@ d3.timer(function(t) {
 });
 
 // var invert;
+var invertBreakpoints = d3.selectAll(".inverter")[0].map(function(d) { return d.offsetTop; });
 d3.select(window).on("scroll", function() {
   scrollTop = body.node().scrollTop;
   var oldInvert = invert;
-  invert = Math.floor(body.node().scrollTop / 1000) % 2 == 1;
-  if(invert !== oldInvert) body.classed("invert", invert);
+  invertBreakpoints.forEach(function(d,i) {
+    if(scrollTop > d) {
+      invert = i % 2 == 1;
+    }
+  })
+  if(invert !== oldInvert) {
+    body.classed("invert", invert);
+  }
 })
 
 d3.select("body").on("mousemove", function() {
