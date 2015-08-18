@@ -4,6 +4,7 @@ var body = d3.select("body"),
     invert = false;
 
 var canvas = body.append("canvas")
+    .classed("opener", true)
     .attr("width", innerWidth)
     .attr("height", innerHeight);
 
@@ -138,3 +139,5 @@ function drawZoomingText(t, ctx, text, scrub) {
   };
   // ctx.globalAlpha = 1;
 }
+
+var fizzyText = new FizzyText('dat.gui');
