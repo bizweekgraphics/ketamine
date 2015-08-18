@@ -4,23 +4,23 @@ var body = d3.select("body"),
     mouse = [0,0],
     scrollTop = 0,
     invert = false,
-    gifs = ["animation_spark.gif",
-"animation_spark2.gif",
-"k.gif",
-"k2.gif",
-"k2_s.gif",
-"k3.gif",
-"k3_s.gif",
-"blob.gif",
-"lips.gif",
-"hap-face.gif",
-"hap-face2.gif",
-"hap-face3.gif",
-"hap-face4.gif",
-"hap-face4s.gif",
-"guy1.gif"];
-
-
+    gifs = [
+      "animation_spark.gif",
+      "animation_spark2.gif",
+      "k.gif",
+      "k2.gif",
+      "k2_s.gif",
+      "k3.gif",
+      "k3_s.gif",
+      "blob.gif",
+      "lips.gif",
+      "hap-face.gif",
+      "hap-face2.gif",
+      "hap-face3.gif",
+      "hap-face4.gif",
+      "hap-face4s.gif",
+      "guy1.gif"
+    ];
 
 var canvas = body.select(".opener").append("canvas")
     .attr("width", innerWidth)
@@ -170,12 +170,15 @@ var gifInterval = setInterval(function() {
   var radius = innerWidth / 1.7;
   var origin = [innerWidth/2, innerHeight/2];
 
+  // max-width: 1280px / 6.4 = 200px
+  var maxWidth = innerWidth / 6.4;
+
   body.select(".opener").append("img")
     .attr("src", "img/" + _.sample(gifs))
     .style("top", Math.floor(radius*Math.sin(angle) + origin[1])+"px")
     .style("left", Math.floor(radius*Math.cos(angle) + origin[0])+"px")
     .style("-webkit-transform", "translate(-50%,-50%) rotate(0deg)")
-    .style("max-width", "200px")
+    .style("max-width", maxWidth+"px")
     .transition()
     .duration(5000)
     .ease("linear")
