@@ -81,3 +81,10 @@ article {
 .heddek div:nth-child(3) {
   -webkit-transform: rotate(3deg);
 }*/
+
+.top-banner {
+  display: none;
+}
+#full-header {
+  top: -91px;
+}
