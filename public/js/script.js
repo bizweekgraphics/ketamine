@@ -12,7 +12,6 @@ var body = d3.select("body"),
       "k2_s.gif",
       "k3.gif",
       "k3_s.gif",
-      "blob.gif",
       "lips.gif",
       "hap-face.gif",
       "hap-face2.gif",
@@ -158,9 +157,6 @@ function drawZoomingText(t, ctx, text, scrub) {
   };
   // ctx.globalAlpha = 1;
 }
-
-// PULLQUOTES
-// var fizzyText = new FizzyText('Pullquote');
 
 
 // GIFS
