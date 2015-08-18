@@ -140,4 +140,4 @@ function drawZoomingText(t, ctx, text, scrub) {
   // ctx.globalAlpha = 1;
 }
 
-var fizzyText = new FizzyText('dat.gui');
+var fizzyText = new FizzyText('Pullquote');

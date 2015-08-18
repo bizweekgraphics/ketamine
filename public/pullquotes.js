@@ -6,8 +6,8 @@ function FizzyText(message) {
   // Notice they're all defined with "this". That makes them public.
   // Otherwise, gui-dat can't see them.
 
-  this.growthSpeed = 0.2;       // how fast do particles change size?
-  this.maxSize = 5.59;          // how big can they get?
+  this.growthSpeed = 0.1;       // how fast do particles change size?
+  this.maxSize = 3.59;          // how big can they get?
   this.noiseStrength = 10;      // how turbulent is the flow?
   this.speed = 0.4;             // how fast do particles move?
   this.displayOutline = false;  // should we draw the message as a stroke?
@@ -49,7 +49,7 @@ function FizzyText(message) {
   var noiseScale = 300;
   var frameTime = 30;
 
-  var colors = ["#00aeff", "#0fa954", "#54396e", "#e61d5f"];
+  var colors = ["#000000"];
 
   // This is the context we use to get a bitmap of text using
   // the getImageData function.
@@ -66,7 +66,7 @@ function FizzyText(message) {
   c.setAttribute('height', height);
 
   // Add our demo to the HTML
-  document.getElementById('helvetica-demo').appendChild(c);
+  document.getElementById('pullquote-demo').appendChild(c);
 
   // Stores bitmap image
   var pixels = [];
@@ -212,8 +212,9 @@ function FizzyText(message) {
 
       // Change our position based on the flow field and our
       // explode velocity.
-      this.x += Math.cos(angle) * _this.speed + this.vx;
+      // this.x += Math.cos(angle) * _this.speed + this.vx;
       this.y += -Math.sin(angle) * _this.speed + this.vy;
+      this.y = this.y % height;
 
       this.r = this.constrain(this.r, 0, _this.maxSize);
 
