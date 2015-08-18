@@ -68,12 +68,15 @@ d3.timer(function(t) {
 });
 
 // var invert;
-var invertBreakpoints = d3.selectAll(".inverter")[0].map(function(d) { return d.offsetTop; });
+var invertBreakpoints = d3.selectAll(".inverter")[0].map(function(d) { 
+  return d.offsetTop + d.offsetHeight/2; 
+});
+invertBreakpoints.unshift(0);
 d3.select(window).on("scroll", function() {
   scrollTop = body.node().scrollTop;
   var oldInvert = invert;
   invertBreakpoints.forEach(function(d,i) {
-    if(scrollTop > d) {
+    if(scrollTop + innerHeight/2 > d) {
       invert = i % 2 == 1;
     }
   })
@@ -166,10 +169,6 @@ var gifInterval = setInterval(function() {
   var angle = Math.floor(Math.random()*360);
   var radius = innerWidth / 1.7;
   var origin = [innerWidth/2, innerHeight/2];
-
-  // console.log("Starting at:");
-  // console.log("top: " + Math.floor(50*Math.sin(angle) + 50)+"%");
-  // console.log("left: " + Math.floor(50*Math.cos(angle) + 50)+"%");
 
   body.select(".opener").append("img")
     .attr("src", "img/" + _.sample(gifs))
