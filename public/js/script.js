@@ -4,7 +4,23 @@ var body = d3.select("body"),
     mouse = [0,0],
     scrollTop = 0,
     invert = false,
-    gifs = ["animation_spark.gif", "hap-face.gif", "hap-face2.gif", "k.gif", "k2.gif", "k3.gif"];
+    gifs = ["animation_spark.gif",
+"animation_spark2.gif",
+"k.gif",
+"k2.gif",
+"k2_s.gif",
+"k3.gif",
+"k3_s.gif",
+"blob.gif",
+"lips.gif",
+"hap-face.gif",
+"hap-face2.gif",
+"hap-face3.gif",
+"hap-face4.gif",
+"hap-face4s.gif",
+"guy1.gif"];
+
+
 
 var canvas = body.select(".opener").append("canvas")
     .attr("width", innerWidth)
@@ -47,7 +63,7 @@ d3.timer(function(t) {
     ctx.globalCompositeOperation = "xor";
   })
 
-  drawZoomingText(t, ctx, "KETAMINE", 90);
+  drawZoomingText(t, ctx, "KETAMINE", 120);
 
 });
 
@@ -129,7 +145,7 @@ function drawZoomingText(t, ctx, text, scrub) {
   for (var i = textArray.length - 1; i >= 0; i--) {
     // ctx.globalAlpha = Math.min(1, Math.max(0, 1 - (scrub/200 - i)));
 
-    ctx.font = "bold "+Math.floor((scrub*2/(i*i+1)))+"px sans-serif";
+    ctx.font = "bold "+Math.floor((scrub*2/(i*i+1)))+"px 'Druk Web'";
 
     ctx.fillStyle = i%1 == 0 ? "#000000" : "#ffffff";
     ctx.fillText(textArray[i], innerWidth/2, innerHeight/2);
@@ -156,7 +172,7 @@ var gifInterval = setInterval(function() {
   // console.log("left: " + Math.floor(50*Math.cos(angle) + 50)+"%");
 
   body.select(".opener").append("img")
-    .attr("src", _.sample(gifs))
+    .attr("src", "img/" + _.sample(gifs))
     .style("top", Math.floor(radius*Math.sin(angle) + origin[1])+"px")
     .style("left", Math.floor(radius*Math.cos(angle) + origin[0])+"px")
     .style("-webkit-transform", "translate(-50%,-50%) rotate(0deg)")

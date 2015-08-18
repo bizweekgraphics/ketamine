@@ -38,12 +38,13 @@ body.invert {
   font-family: sans-serif;
   text-align: center;
   font-weight: bold;
+  font-family: 'Druk Web';
 }
 .opener .hed.top {
-  top: 1em;
+  top: 1.5em;
 }
 .opener .hed.bottom {
-  bottom: 1em;
+  bottom: 1.5em;
 }
 
 header {
@@ -51,7 +52,7 @@ header {
 }
 
 article {
-  margin-top: 80%;
+  margin-top: 70%;
   background: white;
   padding: 2em 10em;
 }
@@ -60,4 +61,23 @@ article {
   background: white;
   margin: 0;
   padding: 3em 0;
+}
+
+.heddek {
+  font-family:'Druk Wide Web';
+  text-align: center;
+  padding: 1em 0;
+}
+
+.heddek div {
+  padding: .5em;
+}
+.heddek div:nth-child(1) {
+  -webkit-transform: rotate(5deg);
+}
+.heddek div:nth-child(2) {
+  -webkit-transform: rotate(-2deg);
+}
+.heddek div:nth-child(3) {
+  -webkit-transform: rotate(3deg);
 }
