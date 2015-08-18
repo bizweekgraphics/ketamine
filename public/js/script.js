@@ -1,8 +1,26 @@
+console.log("\n  _______                                                \n |__   __|                                               \n    | | __ _ _ __   __ _ ___    __ _ _ __ ___            \n    | |/ _` | '_ \\ / _` / __|  / _` | '__/ _ \\           \n    | | (_| | |_) | (_| \\__ \\ | (_| | | |  __/           \n    |_|\\__,_| .__/ \\__,_|___/  \\__,_|_|  \\___|           \n            | |       _ _         _       _              \n            |_|      | | |       | |     | |             \n  ___ _ __ ___   __ _| | |  _ __ | | __ _| |_ ___  ___   \n / __| '_ ` _ \\ / _` | | | | '_ \\| |/ _` | __/ _ \\/ __|  \n \\__ \\ | | | | | (_| | | | | |_) | | (_| | ||  __/\\__ \\  \n |___/_| |_| |_|\\__,_|_|_| | .__/|_|\\__,_|\\__\\___||___/  \n                           | |  (_)                      \n  _   _  ___  _   _    ___ |_|_  _  ___  _   _           \n | | | |/ _ \\| | | |  / _ \\ '_ \\| |/ _ \\| | | |          \n | |_| | (_) | |_| | |  __/ | | | | (_) | |_| |          \n  \\__, |\\___/ \\__,_|  \\___|_| |_| |\\___/ \\__, |          \n   __/ |   _ _   _        __   _/ |       __/ |    _     \n  |___/   (_) | | |      / _| |__(_)     |___/    | |    \n __      ___| |_| |__   | |_ _ __ _  ___ _ __   __| |___ \n \\ \\ /\\ / / | __| '_ \\  |  _| '__| |/ _ \\ '_ \\ / _` / __|\n  \\ V  V /| | |_| | | | | | | |  | |  __/ | | | (_| \\__ \\\n   \\_/\\_/ |_|\\__|_| |_| |_| |_|  |_|\\___|_| |_|\\__,_|___/\n                                                         \n                                                                     \n              ____\n              )==(\n              )==(\n              |H |\n              |H |\n              |H |\n             /====\\\n            /  BW  \\\n           /========\\\n          :HHHHHHHH H:\n          |HHHHHHHH H|\n          |HHHHHHHH H|\n          |HHHHHHHH H|\n   \\______|=/========\\________/\n    \\     :/oO/      |\\      /\n     \\    / oOOO     | \\    /\n      \\__/| OOO      |  \\__/\n       )( |  O       |   )(\n       )( |==========|   )(\n       )( |HHHHHHHH H|   )(\n       )( |HHHHHHHH H|   )(\n      .)(.|HHHHHHHH H|  .)(.\n     ~~~~~~~~~~~~~~~~  ~~~~~~            \n\n");
+
 var body = d3.select("body"),
     mouse = [0,0],
     scrollTop = 0,
     invert = false,
-    gifs = ["animation_spark.gif", "hap-face.gif", "hap-face2.gif", "k.gif", "k2.gif", "k3.gif"];
+    gifs = ["animation_spark.gif",
+"animation_spark2.gif",
+"k.gif",
+"k2.gif",
+"k2_s.gif",
+"k3.gif",
+"k3_s.gif",
+"blob.gif",
+"lips.gif",
+"hap-face.gif",
+"hap-face2.gif",
+"hap-face3.gif",
+"hap-face4.gif",
+"hap-face4s.gif",
+"guy1.gif"];
+
+
 
 var canvas = body.select(".opener").append("canvas")
     .attr("width", innerWidth)
@@ -13,8 +31,6 @@ ctx.fillStyle = "#000000";
 ctx.textBaseline = 'middle';
 ctx.textAlign = "center";
 ctx.globalCompositeOperation = "xor";
-
-// var hed = d3.select("h1").text();
 
 d3.timer(function(t) {
 
@@ -47,17 +63,20 @@ d3.timer(function(t) {
     ctx.globalCompositeOperation = "xor";
   })
 
-  drawZoomingText(t, ctx, "KETAMINE", 90);
+  drawZoomingText(t, ctx, "KETAMINE", 120);
 
 });
 
 // var invert;
-var invertBreakpoints = d3.selectAll(".inverter")[0].map(function(d) { return d.offsetTop; });
+var invertBreakpoints = d3.selectAll(".inverter")[0].map(function(d) { 
+  return d.offsetTop + d.offsetHeight/2; 
+});
+invertBreakpoints.unshift(0);
 d3.select(window).on("scroll", function() {
   scrollTop = body.node().scrollTop;
   var oldInvert = invert;
   invertBreakpoints.forEach(function(d,i) {
-    if(scrollTop > d) {
+    if(scrollTop + innerHeight/2 > d) {
       invert = i % 2 == 1;
     }
   })
@@ -129,7 +148,7 @@ function drawZoomingText(t, ctx, text, scrub) {
   for (var i = textArray.length - 1; i >= 0; i--) {
     // ctx.globalAlpha = Math.min(1, Math.max(0, 1 - (scrub/200 - i)));
 
-    ctx.font = "bold "+Math.floor((scrub*2/(i*i+1)))+"px sans-serif";
+    ctx.font = "bold "+Math.floor((scrub*2/(i*i+1)))+"px 'Druk Web'";
 
     ctx.fillStyle = i%1 == 0 ? "#000000" : "#ffffff";
     ctx.fillText(textArray[i], innerWidth/2, innerHeight/2);
@@ -141,8 +160,7 @@ function drawZoomingText(t, ctx, text, scrub) {
 }
 
 // PULLQUOTES
-
-var fizzyText = new FizzyText('Pullquote');
+// var fizzyText = new FizzyText('Pullquote');
 
 
 // GIFS
@@ -152,12 +170,8 @@ var gifInterval = setInterval(function() {
   var radius = innerWidth / 1.7;
   var origin = [innerWidth/2, innerHeight/2];
 
-  // console.log("Starting at:");
-  // console.log("top: " + Math.floor(50*Math.sin(angle) + 50)+"%");
-  // console.log("left: " + Math.floor(50*Math.cos(angle) + 50)+"%");
-
   body.select(".opener").append("img")
-    .attr("src", _.sample(gifs))
+    .attr("src", "img/" + _.sample(gifs))
     .style("top", Math.floor(radius*Math.sin(angle) + origin[1])+"px")
     .style("left", Math.floor(radius*Math.cos(angle) + origin[0])+"px")
     .style("-webkit-transform", "translate(-50%,-50%) rotate(0deg)")

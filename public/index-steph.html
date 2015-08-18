@@ -18,18 +18,18 @@
         <link rel="icon" href="http://www.bloomberg.com/graphics/assets/img/favicon.png" type="image/x-icon">
 
         <!-- meta tags for this project -->
-        <!-- SEO headline rewritten to accomidate keywords -->
-        <title>The Club Drug Cure: Ketamine's New Shot as a Depression Treatment - Bloomberg Business</title>
+        <!-- Enter a title before the dash, probably your headline -->
+        <title>YOUR HEADLINE HERE</title>
 
         <!-- What flavor of Bloomberg will this graphic be on? -->
         <meta property="og:site_name" content="Bloomberg.com"/>
         <!-- What is the main headline? -->
-        <meta property="og:title" content="The Club Drug Cure: Ketamine's New Shot as a Depression Treatment">
+        <meta property="og:title" content="YOUR HEADLINE HERE">
         <!-- What is the tweet / share statement? -->
         <meta property="og:longTitle" content="twitter share language">
         <!-- What is the share-able image -->
         <!-- Image aspect ratio: 1.91:1 Image Dimensions: 1200x630px -->
-        <meta property="og:image" content="http://www.bloomberg.com/graphics/2015-ketamine-depression-treatment/img/IMAGE-FILE"/>
+        <meta property="og:image" content="http://www.bloomberg.com/graphics/YOUR-SLUG-HERE/img/IMAGE-FILE"/>
         <!-- These two can be the dek text -->
         <meta property="og:description" content=""/>
         <meta name="description" content="">
@@ -50,14 +50,17 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <link rel="stylesheet" type="text/css" href="http://www.bloomberg.com/graphics/assets/css/fonts.css"/>
         <link rel="stylesheet" type="text/css" href="http://www.bloomberg.com/graphics/assets/css/business.css?"/>
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
 
         <script src='http://www.bloomberg.com/graphics/assets/js/lib/head.js?'></script>
 
-        <link rel="stylesheet" type="text/css" href="css/style.css"/>
-        <link rel="stylesheet" type="text/css" href="css/style-toph.css"/>
-
+        <style type="text/css">
+        /*
+        styles for this project
+        */
+        </style>
     </head>
-    <body>
+    <body id="skrollr-body">
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -113,24 +116,37 @@
 
         <div class="clearboth"></div>
 
-        <!-- begin Toph opener -->
-        <div class="opener">
-          <div class="hed top">THE</div>
-          <div class="hed bottom">CURE</div>
-        </div>
-        <!-- end Toph opener -->
 
-        <!-- begin Steph article -->
-        <article>
-        <div class="inner centered">
 
-<div class="heddek">
 
-<div><h2>Is ketamine the best hope for curing major depression?</h2></div>
-<div>By Caroline Winter</div>
-<div>August 19, 2015</div>
+
+     <div id="percentread" data-0="width:0%" data-end="width:100%"></div>
+
+<div id="header">
+
+  <h1>Ketamine</h1>
+  <h2>by Caroline Winter</h2>
+
+  <div id="doctor" data-0="top:50px;" data-900="top:-100px;">
+    <img src="img/drfeelgood.png" >
+  </div>
+  <div id="header_top" data-0="bottom:-100px;" data-900="bottom:200px;">
+    <img src="img/header_top.png" >
+  </div>
+  <div id="header_mid" data-0="bottom:-50px;" data-900="bottom:-100px;">
+    <img src="img/header_mid.png" >
+  </div>
+  <div id="header_bottom" data-0="top:0;" data-900="top:-100px;">
+    <img src="img/header_bottom.png" >
+  </div>
+
 
 </div>
+
+
+
+<div class="inner centered">
+
 
 <p>On the seventh floor of a building overlooking the Federal Reserve Bank in lower Manhattan, two medical clinics share an office. One is run by a podiatrist who&rsquo;s outfitted the waiting room with educational materials on foot problems such as hammer toes and bunions. The other clinic doesn&rsquo;t have pamphlets on display and offers a much less conventional service: For the advertised price of $525, severely depressed and suicidal patients can get a 45-minute intravenous infusion of ketamine—better known as the illicit party drug Special K.</p>
 <p>Glen Brooks, a 67-year-old anesthesiologist, opened NY Ketamine Infusions in 2012. &ldquo;At least eight or nine of my patients have ended up making appointments with the podiatrist,&rdquo; he says. &ldquo;But I haven&rsquo;t gotten any patients through him—I don&rsquo;t know why.&rdquo; Not that Brooks is lacking for business. He typically treats 65 patients a week. Most come in for an initial six infusions within a span of two weeks, then return every six to eight weeks for maintenance sessions. To keep up with demand, he often borrows rooms from the podiatrist on weekends so he can treat eight patients at once. His only help is a secretary at the front desk.</p>
@@ -138,14 +154,14 @@
 <p>During the infusions, which are gradual rather than all at once, patients often experience strange sensations, such as seeing colors and patterns when they close their eyes. &ldquo;The first time, I had a sense that the chair was rocketing upwards, just on and on and on … a kind of weightlessness,&rdquo; a patient from a different clinic explains. The 51-year-old environmental engineer and university lecturer, who asked to remain anonymous for professional reasons, credits ketamine with reviving him from a near-catatonic depression. &ldquo;During the treatment, I got this profound feeling of optimism,&rdquo; he says. &ldquo;I told my family it&rsquo;s like getting hit by the freight train of happiness—they tease me about that now.&rdquo;</p>
 </div>
 
+<div class="breakpoint"></div>
 
-<div class="fullw inverter">
+<div class="fullw">
   <img class="onehunna" src="img/guy.jpg">
-  <div class="decal1 decal-sm"><img src="img/guy1.gif"></div>
+  <div class="decal1"><img src="img/guy1.gif"></div>
   <div class="decal2"><img src="img/animation_spark2.gif"></div>
   <div class="decal2"><img src="img/hap-face3.gif"></div>
   <div class="decal6"><img src="img/lips.gif"></div>
-  <div class="caption">Brooks in his New York office</div>
 </div>
 
 <div class="inner centered">
@@ -172,7 +188,8 @@
 <p>The FDA&rsquo;s approval of ketamine for depression hinges on multiphase clinical studies, which are unlikely to happen. Pharmaceutical companies usually pay for clinical trials and can&rsquo;t make money off a decades-old generic drug. &ldquo;You can get a few years of exclusivity for a new use, but generally you need more than a few years to recoup the research and development costs of bringing a drug to market,&rdquo; Thase says.</p>
 
 
-<div class="pullq inverter">
+<div class="breakpoint"></div>
+<div class="pullq">
     Dennis Hartman had already scheduled his suicide when he decided to try ketamine
     <div class="decal3"><img src="img/k_s.gif"></div>
     <div class="decal1"><img src="img/blob.gif"></div>
@@ -199,7 +216,8 @@
 <p>Pharmaceutical companies tend to categorize the dissociative effect of ketamine as an unwanted side effect. But Levine—along with many other researchers exploring the promise of psychedelics in battling depression—argues that the hallucinations are likely harmless and may even be helpful. &ldquo;Ultimately, it&rsquo;s a dreamlike experience,&rdquo; he says. &ldquo;We don&rsquo;t tell people not to sleep because they might dream.&rdquo; Later this year, Levine plans to begin a study to evaluate whether patients who experience a stronger dissociative effect during ketamine infusions have better outcomes.</p>
 
 
-<div class="pullq inverter">
+<div class="breakpoint"></div>
+<div class="pullq">
     <div class="decal5"><img src="img/hap-face4s.gif"></div>
     <div class="decal4"><img src="img/blob2.gif"></div>
     &ldquo;We believe we can double the income of the average family physician or internist&rdquo;
@@ -217,32 +235,29 @@
 <p>He says it&rsquo;s hard to stay away from the office when there are so many people asking for help. &ldquo;No one gets turned away, especially if they&rsquo;re suicidal,&rdquo; Brooks says. &ldquo;It just gets more and more personal. I kind of see my son&rsquo;s face in everyone who comes in.&rdquo;</p>
 
 
-<div class="inverter"></div>
-
-
 <div id="credits">
   <p>
-Photographer: <strong>Kevin Shea Adams for Bloomberg Businessweek</strong><br>
-Code and illustration: <strong>Steph Davidson and Toph Tucker</strong><br></p>
+Photographs by <strong>Kevin Shea Adams for Bloomberg Businessweek</strong><br>
+Code and illustration by <strong>Steph Davidson and Toph Tucker</strong><br></p>
 </div>
 
 
+
+
 </div>
-      </article>  
-        <!-- end Steph article -->
-
-        <div class="recirc-wrapper">
-        <ul class="t-hide bbg-recirculator-features index-page__items index-page__top-items"></ul>
-        </div>
 
 
-        <!-- Optional Scripts-->
 
-        <!--
-        <script src="http://www.bloomberg.com/graphics/assets/js/vendor/jquery.min.js?"></script>
-        <script src="http://www.bloomberg.com/graphics/assets/js/vendor/topojson-v1.6.8.min.js?"></script>
-        <script src="http://www.bloomberg.com/graphics/assets/js/vendor/queue.v1.min.js?"></script>
-        -->
+
+
+
+
+
+
+
+
+        <ul class="t-hide bbg-recirculator index-page__items index-page__top-items"></ul>
+
 
         <!-- Required Scripts-->
         <script src="http://www.bloomberg.com/graphics/assets/js/vendor/lodash.underscore.min.js?"></script>
@@ -272,7 +287,30 @@ Code and illustration: <strong>Steph Davidson and Toph Tucker</strong><br></p>
 
         <script src='http://www.bloomberg.com/graphics/assets/js/lib/share.js?'></script>
         <script src='http://www.bloomberg.com/graphics/assets/js/lib/tracker.js?'></script>
-        <script src='js/recirculator-features.js?'></script>
+        <script src='http://www.bloomberg.com/graphics/assets/js/lib/recirculator.js?'></script>
+
+
+
+        <script type="text/javascript">//<![CDATA[ 
+            function resize()
+            {
+                var heights = window.innerHeight;
+                document.getElementById("header").style.height = heights + "px";
+            }
+            resize();
+            window.onresize = function() {
+                resize();
+            };
+            //]]>  
+
+        </script> 
+
+        <script src='js/skrollr.min.js'></script>
+    <script type="text/javascript">
+    var s = skrollr.init();
+    </script>
+
+
 
         <script type="text/javascript">
           initShare()
@@ -288,9 +326,9 @@ Code and illustration: <strong>Steph Davidson and Toph Tucker</strong><br></p>
               d3.select('#full-header-space').classed('stuck', fixedHeader)
             }
           });
+          (function(){
+          })()
+
         </script>
-
-        <script src='js/script.js?'></script>
-
     </body>
 </html>

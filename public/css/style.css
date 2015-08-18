@@ -1,0 +1,181 @@
+/*
+
+     .-.    __
+    |   |  /\ \
+    |   |  \_\/      __        .-.
+    |___|        __ /\ \      /:::\
+    |:::|       / /\\_\/     /::::/
+    |:::|       \/_/        / `-:/
+    ':::'__   _____ _____  /    /
+        / /\ /     |:::::\ \   /
+        \/_/ \     |:::::/  `"`
+           __ `"""""""""`
+          /\ \
+          \_\/
+                                    _________
+                                   {_________}
+                                    )=======(
+                                   /         \
+       SD                         | _________ |
+            TT                    ||         ||
+                                  ||  |_/    ||
+                                  ||  | \    ||
+                            __    ||  |  \   ||
+                       __  (_|)   |'---------'|
+                      (_|)        `-.........-'
+
+
+
+
+*/
+
+@font-face{font-family:'Druk Bold Web';src:url(https://s3.amazonaws.com/bw-fonts/Druk-Bold-Web.eot);src:url(https://s3.amazonaws.com/bw-fonts/Druk-Bold-Web.eot?#iefix) 
+format('embedded-opentype'),url(https://s3.amazonaws.com/bw-fonts/Druk-Bold-Web.woff) format('woff'),url(https://s3.amazonaws.com/bw-fonts/Druk-Bold-Web.ttf) 
+format('truetype'),url('https://s3.amazonaws.com/bw-fonts/Druk-Bold-Web.svg#Druk Web') format('svg');
+font-weight:500;font-style:normal;font-stretch:normal}
+
+@font-face{font-family:'Druk Web';src:url(https://s3.amazonaws.com/bw-fonts/Druk-Medium-Web.eot);src:url(https://s3.amazonaws.com/bw-fonts/Druk-Medium-Web.eot?#iefix) 
+format('embedded-opentype'),url(https://s3.amazonaws.com/bw-fonts/Druk-Medium-Web.woff) format('woff'),url(https://s3.amazonaws.com/bw-fonts/Druk-Medium-Web.ttf) 
+format('truetype'),url('https://s3.amazonaws.com/bw-fonts/Druk-Medium-Web.svg#Druk Web') format('svg');
+font-weight:500;font-style:normal;font-stretch:normal}
+
+@font-face{font-family:'Druk Wide Web';src:url(https://s3.amazonaws.com/bw-fonts/DrukWide-Super-Web.eot);
+src:url(https://s3.amazonaws.com/bw-fonts/DrukWide-Super-Web.eot?#iefix) format('embedded-opentype'),url(https://s3.amazonaws.com/bw-fonts/DrukWide-Super-Web.woff) 
+format('woff'),url(https://s3.amazonaws.com/bw-fonts/DrukWide-Super-Web.ttf) 
+format('truetype'),url('https://s3.amazonaws.com/bw-fonts/DrukWide-Super-Web.svg#Druk Wide Web') 
+format('svg');font-weight:900;font-style:normal;font-stretch:normal}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+  transition: -webkit-filter 1s;
+  color:#000;
+}
+
+.centered {margin: 0 auto;}
+
+#header {
+  overflow: hidden;
+  width: 100%;
+  text-align: center;
+  max-height: 1000px;
+  max-width: 2000px;
+  margin: 0 auto;
+  position: relative;
+
+  background: rgb(137,111,0); /* Old browsers */
+  background: -moz-linear-gradient(left,  rgba(137,111,0,1) 0%, rgba(191,156,0,1) 32%, rgba(191,156,0,1) 32%, rgba(238,202,0,1) 74%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(137,111,0,1)), color-stop(32%,rgba(191,156,0,1)), color-stop(32%,rgba(191,156,0,1)), color-stop(74%,rgba(238,202,0,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left,  rgba(137,111,0,1) 0%,rgba(191,156,0,1) 32%,rgba(191,156,0,1) 32%,rgba(238,202,0,1) 74%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left,  rgba(137,111,0,1) 0%,rgba(191,156,0,1) 32%,rgba(191,156,0,1) 32%,rgba(238,202,0,1) 74%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left,  rgba(137,111,0,1) 0%,rgba(191,156,0,1) 32%,rgba(191,156,0,1) 32%,rgba(238,202,0,1) 74%); /* IE10+ */
+  background: linear-gradient(to right,  rgba(137,111,0,1) 0%,rgba(191,156,0,1) 32%,rgba(191,156,0,1) 32%,rgba(238,202,0,1) 74%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#896f00', endColorstr='#eeca00',GradientType=1 ); /* IE6-9 */
+
+}
+
+#doctor, #header_top, #header_mid, #header_bottom {position: absolute;}
+
+#doctor {z-index: 5; width: 800px;height: 1179px;
+  left:50%;
+  transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+}
+
+#header_top{z-index: 6;width:1400px;height:950px;}
+#header_mid{z-index: 4;width:1400px;height:950px;}
+#header_bottom{z-index: 1;width:1400px;height:950px;}
+
+.fullw {
+  width: 100%;
+  position: relative; left: 0; top: 0;
+  max-width: 1000px;
+  margin: 3em auto;
+}
+.onehunna img{width: 100%}
+
+
+.inner {
+   max-width: 700px;
+  font-family: 'TiemposTextWeb-Regular';
+  font-size: 19px;
+  line-height: 25px;
+}
+
+.decal1,.decal2,.decal3,.decal4,.decal5,.decal6{position: absolute;}
+.decal1{bottom:-130px;right:-150px;}
+.decal2{top:-50px;left:-50px;}
+.decal3{top:-150px;left:-130px;}
+.decal4{bottom:-150px;right:-150px;}
+.decal5{top:-120px;left:-80px;}
+.decal6{top:150px;left:80px;}
+
+.decal-sm {
+  -webkit-transform: scale(.5);
+}
+
+.center{
+   margin: 0 auto;
+}
+
+.pullq{
+  font-family:'Druk Web';
+  margin: 40px -100px;
+  font-size: 80px;
+  line-height: 80px;
+  text-align: center;
+  position: relative; left: 0; top: 0;
+  z-index: 2;
+}
+
+.inner img {max-width: 100%}
+
+.photo2{
+  float:right;
+  margin-right: -200px;
+  padding: 20px 0px 20px 20px;
+  max-width: 450px;
+}
+
+#percentread{
+  background: #000;
+  position: fixed;
+  bottom:0;left:0;
+  width:0;
+  height: 4px;
+  z-index: 5555;
+}
+
+
+.chart{float:left;margin-left: -200px; padding: 20px 20px 20px 0;max-width: 240px}
+.chart img{width: 100%}
+
+.caption {font-size: 14px;line-height: 16px}
+
+#credits{
+  border-top: 2px solid black;
+  font-size: 18px;
+  margin:40px 0 80px 0;
+}
+
+@media (max-width: 300px) {
+}
+
+@media (max-width: 400px) {
+}
+
+@media (max-width: 600px) {
+}
+
+@media (max-width: 800px) {
+}
+
+@media (max-width: 1000px) {
+}
+
+@media (max-width: 1200px) {
+}
