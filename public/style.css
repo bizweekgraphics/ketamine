@@ -18,7 +18,7 @@ body.invert {
   -webkit-filter: invert(100%);
 }
 
-canvas.opener {
+.opener {
   position: fixed;
   top: 0;
   left: 0;
@@ -27,25 +27,43 @@ canvas.opener {
   z-index: -1;
 }
 
-header {
-  visibility: hidden;
-}
-
-article {
-  margin-top: 100%;
-  background: white;
-  padding: 2em 10em;
-}
-
-.heddd {
+.opener canvas {
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.opener img {
+  position: absolute;
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.opener .hed {
+  position: absolute;
   width: 100%;
   font-size: 6em;
   font-family: sans-serif;
   text-align: center;
   font-weight: bold;
+}
+.opener .hed.top {
+  top: 1em;
+}
+.opener .hed.bottom {
+  bottom: 1em;
+}
+
+header {
+  visibility: hidden;
+}
+
+article {
+  margin-top: 80%;
+  background: white;
+  padding: 2em 10em;
 }
 
 .inner {

@@ -1,10 +1,10 @@
 var body = d3.select("body"),
     mouse = [0,0],
     scrollTop = 0,
-    invert = false;
+    invert = false,
+    gifs = ["animation_spark.gif", "hap-face.gif", "hap-face2.gif", "k.gif", "k2.gif", "k3.gif"];
 
-var canvas = body.append("canvas")
-    .classed("opener", true)
+var canvas = body.select(".opener").append("canvas")
     .attr("width", innerWidth)
     .attr("height", innerHeight);
 
@@ -14,7 +14,7 @@ ctx.textBaseline = 'middle';
 ctx.textAlign = "center";
 ctx.globalCompositeOperation = "xor";
 
-var hed = d3.select("h1").text();
+// var hed = d3.select("h1").text();
 
 d3.timer(function(t) {
 
@@ -140,4 +140,35 @@ function drawZoomingText(t, ctx, text, scrub) {
   // ctx.globalAlpha = 1;
 }
 
+// PULLQUOTES
+
 var fizzyText = new FizzyText('Pullquote');
+
+
+// GIFS
+
+var gifInterval = setInterval(function() {
+  var angle = Math.floor(Math.random()*360);
+  var radius = innerWidth / 1.7;
+  var origin = [innerWidth/2, innerHeight/2];
+
+  // console.log("Starting at:");
+  // console.log("top: " + Math.floor(50*Math.sin(angle) + 50)+"%");
+  // console.log("left: " + Math.floor(50*Math.cos(angle) + 50)+"%");
+
+  body.select(".opener").append("img")
+    .attr("src", _.sample(gifs))
+    .style("top", Math.floor(radius*Math.sin(angle) + origin[1])+"px")
+    .style("left", Math.floor(radius*Math.cos(angle) + origin[0])+"px")
+    .style("-webkit-transform", "translate(-50%,-50%) rotate(0deg)")
+    .style("max-width", "200px")
+    .transition()
+    .duration(5000)
+    .ease("linear")
+    .style("top", origin[1]+"px")
+    .style("left", origin[0]+"px")
+    .style("-webkit-transform", "translate(-50%,-50%) rotate(180deg)")
+    .style("max-width", "1px")
+    .remove();
+
+}, 150);
