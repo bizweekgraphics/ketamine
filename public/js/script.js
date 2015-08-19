@@ -112,7 +112,7 @@ function handleScroll() {
 
 function handleSizing() {  
 
-  if(innerWidth < 728) {
+  if(innerWidth < 1060) {
     // "mobile" (narrow) layout
     canvas
       .attr("width", innerWidth)

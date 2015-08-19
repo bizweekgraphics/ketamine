@@ -101,12 +101,12 @@ article {
 .top-banner {
   display: none;
 }
-@media (min-width: 728px) {
+@media (min-width: 1060px) {
   #full-header {
     top: -91px;
   }
 }
-@media (max-width: 727px) {
+@media (max-width: 1059px) {
   .opener {
     position: relative;
   }
