@@ -96,6 +96,9 @@ function handleScroll() {
   openerVisible = scrollTop < innerHeight + 300;
   if(openerVisible !== oldOpenerVisible) {
     d3.select(".opener").style("visibility", openerVisible ? "visible" : "hidden");
+    if(!openerVisible) {
+      d3.select(".opener").selectAll("img.gif-abyss").remove();
+    }
   }
   
   // handle color inversion
@@ -148,6 +151,7 @@ function renderGifs() {
 
   // don't render gifs below 400px wide
   if(innerWidth < 400) return false;
+  if(!openerVisible) return false;
 
   var angle = Math.floor(Math.random()*360);
   var radius = innerWidth / 1.7;
@@ -157,6 +161,7 @@ function renderGifs() {
   var maxWidth = innerWidth / 6.4;
 
   body.select(".opener").append("img")
+    .classed("gif-abyss", true)
     .attr("src", "img/" + _.sample(gifs))
     .style("top", Math.floor(radius*Math.sin(angle) + origin[1])+"px")
     .style("left", Math.floor(radius*Math.cos(angle) + origin[0])+"px")
