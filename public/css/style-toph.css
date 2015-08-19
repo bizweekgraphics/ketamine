@@ -86,10 +86,11 @@ article {
 }
 
 /* ad not visible on load, comes in on scroll */
-
 .top-banner {
   display: none;
 }
-#full-header {
-  top: -91px;
+@media (min-width: 728px) {
+  #full-header {
+    top: -91px;
+  }
 }

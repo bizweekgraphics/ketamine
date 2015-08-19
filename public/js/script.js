@@ -23,17 +23,26 @@ var body = d3.select("body"),
       "guy1.gif"
     ];
 
-var canvas = body.select(".opener").append("canvas")
-    .attr("width", innerWidth)
-    .attr("height", innerHeight);
-
+// set up canvas
+var canvas = body.select(".opener").append("canvas");
 var ctx = canvas.node().getContext("2d");
 ctx.fillStyle = "#000000";
-ctx.textBaseline = 'middle';
-ctx.textAlign = "center";
 ctx.globalCompositeOperation = "xor";
 
-d3.timer(function(t) {
+// some layout
+handleSizing();
+handleScroll();
+d3.timer(render);
+var gifInterval = setInterval(renderGifs, 150);
+
+// bindings
+d3.select(window).on("scroll", handleScroll);
+d3.select(window).on("resize", handleSizing);
+d3.select("body").on("mousemove", function() {
+  mouse = d3.mouse(this);
+});
+
+function render(t) {
 
   if(!openerVisible) return false;
 
@@ -68,18 +77,9 @@ d3.timer(function(t) {
 
   drawZoomingText(t, ctx, "KETAMINE", 120);
 
-});
-
-invertBreakpoints = getInverterBreakpoints();
-function getInverterBreakpoints() {
-  var breakpoints = d3.selectAll(".inverter")[0].map(function(d) { 
-    return d.offsetTop + d.offsetHeight/2; 
-  })
-  breakpoints.unshift(0);
-  return breakpoints;
 }
 
-d3.select(window).on("scroll", function() {
+function handleScroll() {
   
   // save scrolltop
   scrollTop = d3.select("html").node().scrollTop || d3.select("body").node().scrollTop;
@@ -101,21 +101,32 @@ d3.select(window).on("scroll", function() {
   if(invert !== oldInvert) {
     body.classed("invert", invert);
   }
-})
+}
 
-d3.select("body").on("mousemove", function() {
-  mouse = d3.mouse(this);
-})
-
-d3.select(window).on("resize", function() {
+function handleSizing() {
+  // size canvas, set text center middle
   canvas
     .attr("width", innerWidth)
     .attr("height", innerHeight);
   ctx.textBaseline = 'middle';
   ctx.textAlign = "center";
 
+  // find breakpoints for color inversion
   invertBreakpoints = getInverterBreakpoints();
-})
+
+  // header vertical sizing
+  d3.select("article").style("margin-top", innerHeight+"px");
+}
+
+function getInverterBreakpoints() {
+  // breaks at the vertical middle of the container with the inverter class
+  var breakpoints = d3.selectAll(".inverter")[0].map(function(d) { 
+    return d.offsetTop + d.offsetHeight/2; 
+  })
+  // add the top of the page as a breakpoint
+  breakpoints.unshift(0);
+  return breakpoints;
+}
 
 function cycleRadius(t,i) {
   return (20*(10-i)) + 200*(Math.sin(i*t/5000)+1);
@@ -179,10 +190,7 @@ function drawZoomingText(t, ctx, text, scrub) {
   // ctx.globalAlpha = 1;
 }
 
-
-// GIFS
-
-var gifInterval = setInterval(function() {
+function renderGifs() {
   var angle = Math.floor(Math.random()*360);
   var radius = innerWidth / 1.7;
   var origin = [innerWidth/2, innerHeight/2];
@@ -207,4 +215,4 @@ var gifInterval = setInterval(function() {
     .style("max-width", "1px")
     .remove();
 
-}, 150);
+}
