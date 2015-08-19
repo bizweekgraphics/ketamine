@@ -51,14 +51,12 @@ function render(t) {
   d3.range(20).map(function(i) {
     var baseBandWidth = canvas.node().width / 39;
     var offset = 2*baseBandWidth * i;
-    // var bandWidth = baseBandWidth * (0.5*Math.sin((i-10)*t/10000)+1);
     var bandWidth = baseBandWidth * (Math.abs(offset - mouse[0])/canvas.node().width + 0.5);
     ctx.fillRect(offset, 0, bandWidth, canvas.node().height);
   })
   d3.range(20).map(function(i) {
     var baseBandWidth = canvas.node().width / 39;
     var offset = 2*baseBandWidth * i;
-    // var bandWidth = baseBandWidth * (0.5*Math.sin((i-10)*t/10000)+1);
     var bandWidth = baseBandWidth * (Math.abs(offset - mouse[1])/canvas.node().height + 0.5);
     ctx.fillRect(0, offset, canvas.node().width, bandWidth);
   })
@@ -75,8 +73,9 @@ function render(t) {
     ctx.globalCompositeOperation = "xor";
   })
 
-  drawZoomingText(t, ctx, "KETAMINE", 120);
-
+  // draw text
+  ctx.font = "bold "+240+"px 'Druk Web'";
+  ctx.fillText("KETAMINE", innerWidth/2, innerHeight/2);
 }
 
 function handleScroll() {
@@ -128,68 +127,6 @@ function getInverterBreakpoints() {
   return breakpoints;
 }
 
-function cycleRadius(t,i) {
-  return (20*(10-i)) + 200*(Math.sin(i*t/5000)+1);
-}
-
-function pulsingConcentric(t,i) {
-  return d3.range(100).map(function(i) { return (10*(100-i) + 5*Math.sin(t/500 + 5*i)); }).sort(d3.descending);
-}
-
-// http://stackoverflow.com/a/8937497/120290 :)
-function drawEqTriangle(ctx, side, cx, cy){
-    
-  var h = side * (Math.sqrt(3)/2);
-
-  // ctx.strokeStyle = "#ff0000";
-
-  ctx.save();
-  ctx.translate(cx, cy);
-
-  ctx.beginPath();
-
-    ctx.moveTo(0, -h / 2);
-    ctx.lineTo( -side / 2, h / 2);
-    ctx.lineTo(side / 2, h / 2);
-    ctx.lineTo(0, -h / 2);
-
-    // ctx.stroke();
-    ctx.fill(); 
-
-  ctx.closePath();
-  ctx.translate(-cx, -cy);
-  ctx.save();
-
-}
-
-function drawEqTriangleRing(t, ctx, radius, number, direction) {
-  for (var i = 0; i < number; i++) {
-    var theta = i * 2 * Math.PI / number; 
-    drawEqTriangle(
-        ctx, 
-        20*Math.sin(t/1000 + theta*2) + 50, 
-        canvas.node().width/2 + radius*Math.sin(direction*t/1000 + theta), 
-        canvas.node().height/2 + radius*Math.cos(direction*t/1000 + theta)
-      );
-  }
-}
-
-function drawZoomingText(t, ctx, text, scrub) {
-  textArray = text.split(" ");
-  for (var i = textArray.length - 1; i >= 0; i--) {
-    // ctx.globalAlpha = Math.min(1, Math.max(0, 1 - (scrub/200 - i)));
-
-    ctx.font = "bold "+Math.floor((scrub*2/(i*i+1)))+"px 'Druk Web'";
-
-    ctx.fillStyle = i%1 == 0 ? "#000000" : "#ffffff";
-    ctx.fillText(textArray[i], innerWidth/2, innerHeight/2);
-
-    // ctx.strokeStyle = i%1 == 1 ? "#000000" : "#ffffff";
-    // ctx.strokeText(textArray[i], innerWidth/2, innerHeight/2);
-  };
-  // ctx.globalAlpha = 1;
-}
-
 function renderGifs() {
   var angle = Math.floor(Math.random()*360);
   var radius = innerWidth / 1.7;
@@ -205,7 +142,7 @@ function renderGifs() {
     .style("-webkit-transform", "translate(-50%,-50%) rotate(0deg)")
     .style("transform", "translate(-50%,-50%) rotate(0deg)")
     .style("max-width", maxWidth+"px")
-    .transition()
+  .transition()
     .duration(5000)
     .ease("linear")
     .style("top", origin[1]+"px")
