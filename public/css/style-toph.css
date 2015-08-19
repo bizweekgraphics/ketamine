@@ -26,6 +26,11 @@ body.invert #full-header > div.container.bannerad {
   height: 100%;
   z-index: -1;
   overflow: hidden;
+
+  /*background-image: url(../img/mobilebackup.jpg);
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;*/
 }
 
 .opener canvas {
@@ -86,11 +91,23 @@ article {
 }
 
 /* ad not visible on load, comes in on scroll */
+/* non-sticky banner below 728px */
 .top-banner {
   display: none;
 }
 @media (min-width: 728px) {
   #full-header {
     top: -91px;
+  }
+}
+@media (max-width: 727px) {
+  .opener {
+    top: 45px;
+  }
+  .opener .hed.top {
+    top: 1em;
+  }
+  .opener .hed.bottom {
+    bottom: 1em;
   }
 }

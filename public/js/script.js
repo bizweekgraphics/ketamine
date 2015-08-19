@@ -133,6 +133,10 @@ function getInverterBreakpoints() {
 }
 
 function renderGifs() {
+
+  // don't render gifs below 400px wide
+  if(innerWidth < 400) return false;
+
   var angle = Math.floor(Math.random()*360);
   var radius = innerWidth / 1.7;
   var origin = [innerWidth/2, innerHeight/2];
