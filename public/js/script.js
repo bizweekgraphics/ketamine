@@ -51,19 +51,22 @@ function render(t) {
 
   if(!openerVisible) return false;
 
+  var w = canvas.node().width,
+      h = canvas.node().height;
+
   ctx.clearRect(0,0,canvas.node().width, canvas.node().height);
 
   d3.range(20).map(function(i) {
     var baseBandWidth = canvas.node().width / 39;
     var offset = 2*baseBandWidth * i;
-    var bandWidth = baseBandWidth * (Math.abs(offset - mouse[0])/canvas.node().width + 0.5);
-    ctx.fillRect(offset, 0, bandWidth, canvas.node().height);
+    var bandWidth = baseBandWidth * (Math.abs(offset - mouse[0])/w + 0.5);
+    ctx.fillRect(offset, 0, bandWidth, h);
   })
   d3.range(20).map(function(i) {
     var baseBandWidth = canvas.node().height / 39;
     var offset = 2*baseBandWidth * i;
-    var bandWidth = baseBandWidth * (Math.abs(offset - mouse[1])/canvas.node().height + 0.5);
-    ctx.fillRect(0, offset, canvas.node().width, bandWidth);
+    var bandWidth = baseBandWidth * (Math.abs(offset - mouse[1])/h + 0.5);
+    ctx.fillRect(0, offset, w, bandWidth);
   })
 
   // timer:  Math.sin(t/500 + (t/10000)*i)
@@ -73,14 +76,14 @@ function render(t) {
   ctx.globalCompositeOperation = "source-over";
   circles.forEach(function(d, i) {
     ctx.beginPath();
-    ctx.arc(innerWidth/2, innerHeight/2, d, 0, 2 * Math.PI, false);
+    ctx.arc(w/2, h/2, d, 0, 2 * Math.PI, false);
     ctx.fill();
     ctx.globalCompositeOperation = "xor";
   })
 
   // draw text
-  ctx.font = "bold "+textSizeScale(innerWidth)+"px 'Druk Web'";
-  ctx.fillText("KETAMINE", innerWidth/2, innerHeight/2);
+  ctx.font = "bold "+textSizeScale(w)+"px 'Druk Web'";
+  ctx.fillText("KETAMINE", w/2, h/2);
 }
 
 function handleScroll() {
@@ -107,19 +110,28 @@ function handleScroll() {
   }
 }
 
-function handleSizing() {
-  // size canvas, set text center middle
-  canvas
-    .attr("width", innerWidth)
-    .attr("height", innerHeight);
+function handleSizing() {  
+
+  if(innerWidth < 728) {
+    // "mobile" (narrow) layout
+    canvas
+      .attr("width", innerWidth)
+      .attr("height", innerHeight-91);
+    d3.select(".opener").style("height", (innerHeight-91)+"px");
+  } else {
+    // "desktop" (wide) layout
+    canvas
+      .attr("width", innerWidth)
+      .attr("height", innerHeight);
+    d3.select("article").style("margin-top", innerHeight+"px");
+  }
+
   ctx.textBaseline = 'middle';
   ctx.textAlign = "center";
 
   // find breakpoints for color inversion
   invertBreakpoints = getInverterBreakpoints();
 
-  // header vertical sizing
-  d3.select("article").style("margin-top", innerHeight+"px");
 }
 
 function getInverterBreakpoints() {

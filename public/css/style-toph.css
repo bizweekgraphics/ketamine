@@ -50,27 +50,23 @@ body.invert #full-header > div.container.bannerad {
 .opener .hed {
   position: absolute;
   width: 100%;
-  font-size: 6em;
+  font-size: 8em;
   font-family: sans-serif;
   text-align: center;
   font-weight: bold;
   font-family: 'Druk Web';
 }
 .opener .hed.top {
-  top: 1.5em;
+  top: 1em;
 }
 .opener .hed.bottom {
-  bottom: 1.5em;
-}
-
-header {
-  visibility: hidden;
+  bottom: 1em;
 }
 
 article {
-  margin-top: 70%;
+  margin-top: 100%;
   background: white;
-  padding: 2em 0;
+  padding: 2em 1em;
   overflow-x: hidden;
 }
 
@@ -102,12 +98,32 @@ article {
 }
 @media (max-width: 727px) {
   .opener {
-    top: 45px;
+    position: relative;
   }
   .opener .hed.top {
-    top: 1em;
+    top: 0.3em;
   }
   .opener .hed.bottom {
-    bottom: 1em;
+    bottom: 0.3em;
+  }
+  article {
+    margin-top: 0;
+  }
+}
+
+/* for tablet or small desktop */
+@media (max-width: 1024px) {
+  .opener .hed.top {
+    top: 0.5em;
+  }
+  .opener .hed.bottom {
+    bottom: 0.5em;
+  }
+}
+
+/* for ultra-large screens */
+@media (min-width: 1400px) {
+  .opener .hed {
+    font-size: 10em;
   }
 }
