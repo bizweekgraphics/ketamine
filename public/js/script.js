@@ -72,7 +72,7 @@ var invertBreakpoints = d3.selectAll(".inverter")[0].map(function(d) {
 });
 invertBreakpoints.unshift(0);
 d3.select(window).on("scroll", function() {
-  scrollTop = body.node().scrollTop;
+  scrollTop = d3.select("html").node().scrollTop || d3.select("body").node().scrollTop;
   var oldInvert = invert;
   invertBreakpoints.forEach(function(d,i) {
     if(scrollTop + innerHeight/2 > d) {

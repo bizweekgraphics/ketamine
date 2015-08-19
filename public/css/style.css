@@ -80,6 +80,7 @@ body {
 .decal6{top:150px;left:80px;}
 .decal-sm {
   -webkit-transform: scale(.5);
+  transform: scale(.5);
 }
 
 
