@@ -4,6 +4,7 @@ var body = d3.select("body"),
     mouse = [0,0],
     scrollTop = 0,
     invert = false,
+    invertBreakpoints,
     gifs = [
       "animation_spark.gif",
       "animation_spark2.gif",
@@ -66,11 +67,15 @@ d3.timer(function(t) {
 
 });
 
-// var invert;
-var invertBreakpoints = d3.selectAll(".inverter")[0].map(function(d) { 
-  return d.offsetTop + d.offsetHeight/2; 
-});
-invertBreakpoints.unshift(0);
+invertBreakpoints = getInverterBreakpoints();
+function getInverterBreakpoints() {
+  var breakpoints = d3.selectAll(".inverter")[0].map(function(d) { 
+    return d.offsetTop + d.offsetHeight/2; 
+  })
+  breakpoints.unshift(0);
+  return breakpoints;
+}
+
 d3.select(window).on("scroll", function() {
   scrollTop = d3.select("html").node().scrollTop || d3.select("body").node().scrollTop;
   var oldInvert = invert;
@@ -94,6 +99,8 @@ d3.select(window).on("resize", function() {
     .attr("height", innerHeight);
   ctx.textBaseline = 'middle';
   ctx.textAlign = "center";
+
+  invertBreakpoints = getInverterBreakpoints();
 })
 
 function cycleRadius(t,i) {
