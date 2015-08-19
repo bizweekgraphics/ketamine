@@ -3,6 +3,7 @@ console.log("\n  _______                                                \n |__  
 var body = d3.select("body"),
     mouse = [0,0],
     scrollTop = 0,
+    openerVisible = true,
     invert = false,
     invertBreakpoints,
     gifs = [
@@ -33,6 +34,8 @@ ctx.textAlign = "center";
 ctx.globalCompositeOperation = "xor";
 
 d3.timer(function(t) {
+
+  if(!openerVisible) return false;
 
   ctx.clearRect(0,0,canvas.node().width, canvas.node().height);
 
@@ -77,7 +80,18 @@ function getInverterBreakpoints() {
 }
 
 d3.select(window).on("scroll", function() {
+  
+  // save scrolltop
   scrollTop = d3.select("html").node().scrollTop || d3.select("body").node().scrollTop;
+
+  // show/hide opener
+  var oldOpenerVisible = openerVisible;
+  openerVisible = scrollTop < innerHeight + 300;
+  if(openerVisible !== oldOpenerVisible) {
+    d3.select(".opener").style("visibility", openerVisible ? "visible" : "hidden");
+  }
+  
+  // handle color inversion
   var oldInvert = invert;
   invertBreakpoints.forEach(function(d,i) {
     if(scrollTop + innerHeight/2 > d) {
