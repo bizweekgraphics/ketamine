@@ -86,18 +86,8 @@ article {
   padding: .5em;
 }
 
-/* for tablet or small desktop */
-@media (max-width: 1024px) {
-  .opener .hed.top {
-    top: 0.5em;
-  }
-  .opener .hed.bottom {
-    bottom: 0.5em;
-  }
-}
-
 /* ad not visible on load, comes in on scroll */
-/* non-sticky banner below 728px */
+/* non-sticky banner below 1060px */
 .top-banner {
   display: none;
 }
