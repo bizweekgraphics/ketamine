@@ -55,7 +55,7 @@ function render(t) {
     ctx.fillRect(offset, 0, bandWidth, canvas.node().height);
   })
   d3.range(20).map(function(i) {
-    var baseBandWidth = canvas.node().width / 39;
+    var baseBandWidth = canvas.node().height / 39;
     var offset = 2*baseBandWidth * i;
     var bandWidth = baseBandWidth * (Math.abs(offset - mouse[1])/canvas.node().height + 0.5);
     ctx.fillRect(0, offset, canvas.node().width, bandWidth);
