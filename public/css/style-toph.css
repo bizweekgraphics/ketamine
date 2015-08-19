@@ -1,19 +1,21 @@
 body {
   margin: 0;
   padding: 0;
-  transition: -webkit-filter 1s;
+  transition: -webkit-filter 1s, filter 1s;
 }
 
 body.invert {
   -webkit-filter: invert(100%);
+          filter: invert(100%);
 }
 
+/* un-inverts (by double-inverting) ad */
 body #full-header > div.container.bannerad {
-  transition: -webkit-filter 1s;
+  transition: -webkit-filter 1s, filter 1s;
 }
-
 body.invert #full-header > div.container.bannerad {
-  -webkit-filter: invert(100%); 
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
 }
 
 .opener {

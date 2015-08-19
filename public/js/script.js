@@ -174,6 +174,7 @@ var gifInterval = setInterval(function() {
     .style("top", Math.floor(radius*Math.sin(angle) + origin[1])+"px")
     .style("left", Math.floor(radius*Math.cos(angle) + origin[0])+"px")
     .style("-webkit-transform", "translate(-50%,-50%) rotate(0deg)")
+    .style("transform", "translate(-50%,-50%) rotate(0deg)")
     .style("max-width", maxWidth+"px")
     .transition()
     .duration(5000)
@@ -181,6 +182,7 @@ var gifInterval = setInterval(function() {
     .style("top", origin[1]+"px")
     .style("left", origin[0]+"px")
     .style("-webkit-transform", "translate(-50%,-50%) rotate(180deg)")
+    .style("transform", "translate(-50%,-50%) rotate(180deg)")
     .style("max-width", "1px")
     .remove();
 
