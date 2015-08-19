@@ -86,6 +86,16 @@ article {
   padding: .5em;
 }
 
+/* for tablet or small desktop */
+@media (max-width: 1024px) {
+  .opener .hed.top {
+    top: 0.5em;
+  }
+  .opener .hed.bottom {
+    bottom: 0.5em;
+  }
+}
+
 /* ad not visible on load, comes in on scroll */
 /* non-sticky banner below 728px */
 .top-banner {
@@ -100,6 +110,9 @@ article {
   .opener {
     position: relative;
   }
+  .opener .hed {
+    font-size: 6em;
+  }
   .opener .hed.top {
     top: 0.3em;
   }
@@ -108,16 +121,6 @@ article {
   }
   article {
     margin-top: 0;
-  }
-}
-
-/* for tablet or small desktop */
-@media (max-width: 1024px) {
-  .opener .hed.top {
-    top: 0.5em;
-  }
-  .opener .hed.bottom {
-    bottom: 0.5em;
   }
 }
 
