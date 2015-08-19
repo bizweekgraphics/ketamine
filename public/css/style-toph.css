@@ -8,6 +8,14 @@ body.invert {
   -webkit-filter: invert(100%);
 }
 
+body #full-header > div.container.bannerad {
+  transition: -webkit-filter 1s;
+}
+
+body.invert #full-header > div.container.bannerad {
+  -webkit-filter: invert(100%); 
+}
+
 .opener {
   position: fixed;
   top: 0;
