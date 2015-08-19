@@ -42,6 +42,11 @@ d3.select("body").on("mousemove", function() {
   mouse = d3.mouse(this);
 });
 
+// scaling
+var textSizeScale = d3.scale.linear()
+  .domain([1280, 320])
+  .range([240, 120]);
+
 function render(t) {
 
   if(!openerVisible) return false;
@@ -74,7 +79,7 @@ function render(t) {
   })
 
   // draw text
-  ctx.font = "bold "+240+"px 'Druk Web'";
+  ctx.font = "bold "+textSizeScale(innerWidth)+"px 'Druk Web'";
   ctx.fillText("KETAMINE", innerWidth/2, innerHeight/2);
 }
 
