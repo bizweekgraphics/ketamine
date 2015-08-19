@@ -60,7 +60,7 @@ body {
   max-width: 1000px;
   margin: 48px auto;
 }
-.onehunna img{width: 100%}
+img.onehunna {width: 100%}
 
 
 .inner {
